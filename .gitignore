@@ -1,3 +1,5 @@
 *.nc
 *.panfs.*
 *.pyc
+/dist/
+/*.egg-info
