@@ -59,10 +59,11 @@ def create_netcdf_1d(size, path, fname, buffersize, mpirank):
 
 if __name__ == '__main__':
     
-    size = long(sys.argv[3]) # in bytes
+    '''size = long(sys.argv[3]) # in bytes
     path = sys.argv[1]
     fname = sys.argv[2]
     create_netcdf_1d(size, path, fname, buffersize)
     #create_netcdf((184900,184900), path)
     #create_netcdf_4d((430,430,430,430), path)
     print 'Finished'
+    '''

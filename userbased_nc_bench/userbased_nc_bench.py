@@ -24,8 +24,10 @@ def create_files(setup, mpisize, mpirank):
     # cycle the file creation to avoid buffering as much as possible
     if mpirank == 0:
         netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1)
+        print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpisize-1)+'.nc')
     else:
         netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+        print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpirank-1)+'.nc')
 
 def get_setup(setup_config_file):
     ''' parse the config file and store in the dict
@@ -42,7 +44,7 @@ def get_setup(setup_config_file):
 
 
 def main():
-
+    cwd = os.path.dirname(os.path.realpath(sys.argv[0]))
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
     mpisize = comm.Get_size()
@@ -56,25 +58,25 @@ def main():
         if rank == 0:
             #create file if doesn't exist
             if not check_files(setup, mpisize):
-                create_files(setup, mpisize)
+                create_files(setup, mpisize, rank)
     else:
         if not check_files(setup, mpisize):
                 create_files(setup, mpisize, rank)
-
+    comm.barrier()
     fid = setup['floc']+setup['fname']
     # use options to decide which test script to run
     if setup['language'] == 'Python' and setup['filetype'] == 'nc':
         from readfile_nc import readfile_1d as readfile
         
-        results = 'read,'+readfile(rank, fid+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+        results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
     elif  setup['language'] == 'Python' and setup['filetype'] == 'bin':
         runfile = 'readfile_bin.py'
         raise ValueError('not implemented yet')
     elif  setup['language'] == 'C' and setup['filetype'] == 'nc':
         #readfile = ctypes.CDLL('./readfile_ncc.so')
         #results = readfile.main(3, "%s %s %s" % (fid+'.nc', setup['readpattern'], setup['buffersize']))
-        output = subprocess.check_output('./readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
-        results =  'read,',str(rank)+','+output.split('\n')[4]
+        output = subprocess.check_output(cwd+'/readfile_nc %s %s %s' % (fid+str(rank)+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+        results =  'read,'+str(rank)+','+output.split('\n')[4]
     elif  setup['language'] == 'C' and setup['filetype'] == 'bin':
         runfile = 'readfile_bin'
         raise ValueError('not implemented yet')
