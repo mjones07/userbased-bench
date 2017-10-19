@@ -8,8 +8,8 @@ setup(name='userbased-nc-bench',
 	author_email='m.jones3@pgr.reading.ac.uk',
 	license='MIT',
 	packages=['userbased_nc_bench'],
-	zip_safe=False
-,	install_requires=[
+	zip_safe=False,
+	install_requires=[
 			'netCDF4',
 			'mpi4py',
 			'numpy',
