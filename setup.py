@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='userbased-nc-bench',
-	version='0.1.1',
+	version='0.1.2',
 	description='Tests read parallel read rates from NetCDF4 files using Python and C. Limited functional at current.',
 	url='https://bitbucket.org/m_jones3/userbased-bench',
 	author='Matthew Jones',
