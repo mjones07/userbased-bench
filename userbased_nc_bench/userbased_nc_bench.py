@@ -12,11 +12,16 @@ import subprocess
 # initially just store the options in a dict
 # defaults are set
 
-def check_files(setup, mpisize):
+def check_files(setup, mpisize, mpirank):
     ''' Checks whether the files required already exist, if so returns True, else False
     '''
+    #TODO
     # not implemented
     return False
+
+def cleanup(setup, mpisize, mpirank):
+    ''' Remove files if nececery. 
+    '''
 
 def create_files(setup, mpisize, mpirank):
     ''' Creates the required files
