@@ -8,6 +8,7 @@ import sys
 import netcdf_creation
 #import ctypes
 import subprocess
+import numpy as np
 
 # initially just store the options in a dict
 # defaults are set
@@ -17,11 +18,28 @@ def check_files(setup, mpisize, mpirank):
     '''
     #TODO
     # not implemented
-    return False
+    #os.path.isfile('')
+    try:
+        if setup['filetype'] == 'nc':
+            fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
+        statinfo = os.stat(fpath)
+        size = statinfo.st_size
+        if abs(setup['filesize']-size) > 100000: # allow 100KB size difference
+            return False
+            
+        else:
+            print 'File exists, skipping creation.'
+            return True
+            
+    except OSError:
+        return False
 
 def cleanup(setup, mpisize, mpirank):
     ''' Remove files if nececery. 
     '''
+    if setup['filetype'] == 'nc':
+            fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
+    os.remove(fpath)
 
 def create_files(setup, mpisize, mpirank):
     ''' Creates the required files
@@ -62,32 +80,41 @@ def main():
     if setup['sharedfile']:
         if rank == 0:
             #create file if doesn't exist
-            if not check_files(setup, mpisize):
+            if not check_files(setup, mpisize, rank):
                 create_files(setup, mpisize, rank)
     else:
-        if not check_files(setup, mpisize):
+        if not check_files(setup, mpisize, rank):
                 create_files(setup, mpisize, rank)
     comm.barrier()
+
     fid = setup['floc']+setup['fname']
     # use options to decide which test script to run
     if setup['language'] == 'Python' and setup['filetype'] == 'nc':
         from readfile_nc import readfile_1d as readfile
         
         results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+
     elif  setup['language'] == 'Python' and setup['filetype'] == 'bin':
         runfile = 'readfile_bin.py'
         raise ValueError('not implemented yet')
+
     elif  setup['language'] == 'C' and setup['filetype'] == 'nc':
         #readfile = ctypes.CDLL('./readfile_ncc.so')
         #results = readfile.main(3, "%s %s %s" % (fid+'.nc', setup['readpattern'], setup['buffersize']))
         output = subprocess.check_output(cwd+'/readfile_nc %s %s %s' % (fid+str(rank)+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
         results =  'read,'+str(rank)+','+output.split('\n')[4]
+
     elif  setup['language'] == 'C' and setup['filetype'] == 'bin':
         runfile = 'readfile_bin'
         raise ValueError('not implemented yet')
+
     else: 
         raise ValueError('Combination of language and filetype not supported')
+
     print results
+
+    if setup['cleanup']:
+        cleanup(setup,mpisize,rank)
 
 if __name__ == '__main__':
     main()
