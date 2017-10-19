@@ -22,6 +22,8 @@ def check_files(setup, mpisize, mpirank):
     try:
         if setup['filetype'] == 'nc':
             fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
+        elif setup['filetype'] == 'bin':
+            fpath = setup['floc']+setup['fname']+str(mpirank)
         statinfo = os.stat(fpath)
         size = statinfo.st_size
         if abs(setup['filesize']-size) > 100000: # allow 100KB size difference
@@ -39,6 +41,8 @@ def cleanup(setup, mpisize, mpirank):
     '''
     if setup['filetype'] == 'nc':
             fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
+    elif setup['filetype'] == 'bin':
+            fpath = setup['floc']+setup['fname']+str(mpirank)
     os.remove(fpath)
 
 def create_files(setup, mpisize, mpirank):
@@ -46,10 +50,20 @@ def create_files(setup, mpisize, mpirank):
     '''
     # cycle the file creation to avoid buffering as much as possible
     if mpirank == 0:
-        netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1)
+        if setup['filetype'] == 'nc':
+            netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1)
+        elif setup['filetype'] == 'bin':
+            fpath = setup['floc']+setup['fname']+str(mpisize-1)
+            with open(fpath, 'wb') as fout:
+                fout.write(os.urandom(setup['filesize']))
         print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpisize-1)+'.nc')
     else:
-        netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+        if setup['filetype'] == 'nc':
+            netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+        elif setup['filetype'] == 'bin':
+            fpath = setup['floc']+setup['fname']+str(mpirank-1)
+            with open(fpath, 'wb') as fout:
+                fout.write(os.urandom(setup['filesize']))
         print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpirank-1)+'.nc')
 
 def get_setup(setup_config_file):
@@ -95,8 +109,9 @@ def main():
         results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
 
     elif  setup['language'] == 'Python' and setup['filetype'] == 'bin':
-        runfile = 'readfile_bin.py'
-        raise ValueError('not implemented yet')
+        from readfile_bin import main as readfile
+        
+        results = 'read,'+readfile(rank, fid+str(rank), setup['readpattern'], setup['buffersize'], setup['randcount'])
 
     elif  setup['language'] == 'C' and setup['filetype'] == 'nc':
         #readfile = ctypes.CDLL('./readfile_ncc.so')
@@ -105,8 +120,8 @@ def main():
         results =  'read,'+str(rank)+','+output.split('\n')[4]
 
     elif  setup['language'] == 'C' and setup['filetype'] == 'bin':
-        runfile = 'readfile_bin'
-        raise ValueError('not implemented yet')
+        output = subprocess.check_output(cwd+'/readfile_bin %s %s %s' % (fid+str(rank), setup['buffersize'], setup['readpattern']),shell=True)
+        results =  'read,'+str(rank)+','+output.split('\n')[3]
 
     else: 
         raise ValueError('Combination of language and filetype not supported')
