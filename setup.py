@@ -12,6 +12,8 @@ setup(name='userbased-nc-bench',
 	install_requires=[
 			'netCDF4',
 			'mpi4py',
-			'numpy'
+			'numpy',
+            'minio',
+            's3-netcdf-python'
 			]
 )

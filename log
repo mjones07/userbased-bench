@@ -1075,3 +1075,39 @@ Host 0 -- ip 192.168.102.53 -- ranks 0 - 3
 2,256000000,256000000,1000000,256,sequential,0.080000,0.083936,3049.942814
 3,256000000,256000000,1000000,256,sequential,0.080000,0.081536,3139.717425
 0,256000000,256000000,1000000,256,sequential,0.070000,0.081339,3147.321703
+Sender: LSF System <lsfadmin@host341.jc.rl.ac.uk>
+Subject: Job 3453664: <ping -c 5 s3testqwer1.sds001.jc.rl.ac.uk> in cluster <lotus> Exited
+
+Job <ping -c 5 s3testqwer1.sds001.jc.rl.ac.uk> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 23 14:23:27 2017.
+Job was executed on host(s) <host341.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Mon Oct 23 14:23:28 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 23 14:23:28 2017.
+Terminated at Mon Oct 23 14:23:28 2017.
+Results reported at Mon Oct 23 14:23:28 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+ping -c 5 s3testqwer1.sds001.jc.rl.ac.uk
+------------------------------------------------------------
+
+Exited with exit code 2.
+
+Resource usage summary:
+
+    CPU time :                                   0.01 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   0 sec.
+    Turnaround time :                            1 sec.
+
+The output (if any) follows:
+
+ping: unknown host s3testqwer1.sds001.jc.rl.ac.uk
