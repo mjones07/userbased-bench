@@ -9,6 +9,7 @@ import netcdf_creation
 #import ctypes
 import subprocess
 import numpy as np
+from time import time, clock
 
 # initially just store the options in a dict
 # defaults are set
@@ -20,20 +21,26 @@ def check_files(setup, mpisize, mpirank):
     # not implemented
     #os.path.isfile('')
     try:
-        if setup['filetype'] == 'nc':
-            fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
-        elif setup['filetype'] == 'bin':
-            fpath = setup['floc']+setup['fname']+str(mpirank)
-        statinfo = os.stat(fpath)
-        size = statinfo.st_size
-        if abs(setup['filesize']-size) > 100000: # allow 100KB size difference
-            return False
-            
+        if setup['stor'] == 's3':
+            if setup['s3fileoverwrite']:
+                return False
+            else:
+                return True
         else:
-            print 'File exists, skipping creation.'
-            return True
+            if setup['filetype'] == 'nc':
+                fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
+            elif setup['filetype'] == 'bin':
+                fpath = setup['floc']+setup['fname']+str(mpirank)
+            statinfo = os.stat(fpath)
+            size = statinfo.st_size
+            if abs(setup['filesize']-size) > 100000: # allow 100KB size difference
+                return False
+                
+            else:
+                print 'File exists, skipping creation.'
+                return True
             
-    except OSError:
+    except:
         return False
 
 def cleanup(setup, mpisize, mpirank):
@@ -50,21 +57,23 @@ def create_files(setup, mpisize, mpirank):
     '''
     # cycle the file creation to avoid buffering as much as possible
     if mpirank == 0:
+        print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpisize-1)+'.nc')
         if setup['filetype'] == 'nc':
-            netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1)
+            netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, setup['stor'])
         elif setup['filetype'] == 'bin':
             fpath = setup['floc']+setup['fname']+str(mpisize-1)
             with open(fpath, 'wb') as fout:
                 fout.write(os.urandom(setup['filesize']))
-        print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpisize-1)+'.nc')
+        
     else:
+        print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpirank-1)+'.nc')
         if setup['filetype'] == 'nc':
-            netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+            netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, setup['stor'])
         elif setup['filetype'] == 'bin':
             fpath = setup['floc']+setup['fname']+str(mpirank-1)
             with open(fpath, 'wb') as fout:
                 fout.write(os.urandom(setup['filesize']))
-        print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpirank-1)+'.nc')
+        
 
 def get_setup(setup_config_file):
     ''' parse the config file and store in the dict
@@ -90,20 +99,31 @@ def main():
     
     setup_config_file = sys.argv[1]
     setup = get_setup(setup_config_file)
-    # create file
+    writetime=time()
+    writeclock=clock()
+    # create files
     if setup['sharedfile']:
         if rank == 0:
             #create file if doesn't exist
             if not check_files(setup, mpisize, rank):
                 create_files(setup, mpisize, rank)
+                print 'write,%s,%s,%s,%s' % (rank,setup['filesize'],time()-writetime,clock()-writeclock,setup['filesize']/1000000/(time()-writetime))
+    
     else:
         if not check_files(setup, mpisize, rank):
                 create_files(setup, mpisize, rank)
+                print 'write,%s,%s,%s,%s,%s' % (rank,setup['filesize'],time()-writetime,clock()-writeclock,setup['filesize']/1000000/(time()-writetime))
     comm.barrier()
+    
 
     fid = setup['floc']+setup['fname']
     # use options to decide which test script to run
-    if setup['language'] == 'Python' and setup['filetype'] == 'nc':
+    if setup['language'] == 'Python' and setup['filetype'] == 'nc' and setup['stor'] == 's3':
+        from readfile_s3 import readfile_1d as readfile
+        
+        results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+
+    elif setup['language'] == 'Python' and setup['filetype'] == 'nc':
         from readfile_nc import readfile_1d as readfile
         
         results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
@@ -130,6 +150,7 @@ def main():
 
     if setup['cleanup']:
         cleanup(setup,mpisize,rank)
+    
 
 if __name__ == '__main__':
     main()

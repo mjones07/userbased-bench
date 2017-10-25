@@ -1,8 +1,13 @@
 #!/usr/bin/env python2.7
 
 import numpy as np
-from netCDF4 import Dataset
+import os
 import sys
+
+
+sys.path.append(os.path.expanduser("~/s3netcdf/S3-netcdf-python/"))
+
+from S3netCDF4._s3netCDF4 import s3Dataset as Dataset
 
 def create_netcdf(size, path):
     # Calculate dim size
@@ -37,8 +42,15 @@ def create_netcdf_4d(size, path):
 
 
 
-def create_netcdf_1d(size, path, fname, buffersize, mpirank):
+def create_netcdf_1d(size, path, fname, buffersize, mpirank, stor='filesystem'):
     # Calculate dim size
+    if stor == 'filesystem':
+        from netCDF4 import Dataset
+    elif stor == 's3':
+        from S3netCDF4._s3netCDF4 import s3Dataset as Dataset
+    else:
+        raise ValueError("Only stor='filesystem'|'s3' supported")
+
     dimsize = long(size/8.)
     bsize = long(buffersize/8.)
     fid = path+fname+str(mpirank)+'.nc'
@@ -58,7 +70,7 @@ def create_netcdf_1d(size, path, fname, buffersize, mpirank):
 
 
 if __name__ == '__main__':
-    
+    create_netcdf_1d(256000000, 's3://s3testqwer/s3testqwer1/','createtest',1000000,0,stor='s3')
     '''size = long(sys.argv[3]) # in bytes
     path = sys.argv[1]
     fname = sys.argv[2]
