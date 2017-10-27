@@ -31,6 +31,8 @@ def check_files(setup, mpisize, mpirank):
                 fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
             elif setup['filetype'] == 'bin':
                 fpath = setup['floc']+setup['fname']+str(mpirank)
+            elif setup['filetype'] == 'hdf':
+                fpath = setup['floc']+setup['fname']+str(mpirank)+'.hdf5'
             statinfo = os.stat(fpath)
             size = statinfo.st_size
             if abs(setup['filesize']-size) > 100000: # allow 100KB size difference
@@ -60,6 +62,8 @@ def create_files(setup, mpisize, mpirank):
         print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpisize-1)+'.nc')
         if setup['filetype'] == 'nc':
             netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, setup['stor'])
+        elif setup['filetype'] == 'hdf':
+            netcdf_creation.create_hdf5_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, setup['stor'])
         elif setup['filetype'] == 'bin':
             fpath = setup['floc']+setup['fname']+str(mpisize-1)
             with open(fpath, 'wb') as fout:
@@ -69,6 +73,8 @@ def create_files(setup, mpisize, mpirank):
         print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpirank-1)+'.nc')
         if setup['filetype'] == 'nc':
             netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, setup['stor'])
+        elif setup['filetype'] == 'hdf':
+            netcdf_creation.create_hdf5_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, setup['stor'])
         elif setup['filetype'] == 'bin':
             fpath = setup['floc']+setup['fname']+str(mpirank-1)
             with open(fpath, 'wb') as fout:
@@ -99,6 +105,7 @@ def main():
     
     setup_config_file = sys.argv[1]
     setup = get_setup(setup_config_file)
+    print setup
     writetime=time()
     writeclock=clock()
     # create files
@@ -127,6 +134,11 @@ def main():
         from readfile_nc import readfile_1d as readfile
         
         results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+
+    elif setup['language'] == 'Python' and setup['filetype'] == 'hdf':
+        from readfile_hdf import readfile_1d as readfile
+        
+        results = 'read,'+readfile(rank, fid+str(rank)+'.hdf5', setup['readpattern'], setup['buffersize'], setup['randcount'])
 
     elif  setup['language'] == 'Python' and setup['filetype'] == 'bin':
         from readfile_bin import main as readfile

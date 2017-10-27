@@ -7,7 +7,7 @@ import sys
 
 sys.path.append(os.path.expanduser("~/s3netcdf/S3-netcdf-python/"))
 
-from S3netCDF4._s3netCDF4 import s3Dataset as Dataset
+
 
 def create_netcdf(size, path):
     # Calculate dim size
@@ -67,10 +67,29 @@ def create_netcdf_1d(size, path, fname, buffersize, mpirank, stor='filesystem'):
 
     f.close()
 
+def create_hdf5_1d(size, path, fname, buffersize, mpirank, stor='filesystem'):
+    assert stor == 'filesystem', 'Only posix style filesystem currently supported with hdf5 creation'
+    import h5py
+
+    dimsize = long(size/8.)
+    bsize = long(buffersize/8.)
+    fid = path+fname+str(mpirank)+'.hdf5'
+    f = h5py.File(fid,'w')
+    dset = f.create_dataset('data',(dimsize,),'f8')
+
+    for i in xrange(0,dimsize,bsize):
+        slice_ind0 = i
+        slice_ind1 = i+bsize
+        dset[slice_ind0:slice_ind1] = np.random.random(bsize)
+
+
+
+    f.close()
 
 
 if __name__ == '__main__':
-    create_netcdf_1d(256000000, 's3://s3testqwer/s3testqwer1/','createtest',1000000,0,stor='s3')
+    #create_netcdf_1d(256000000, 's3://s3testqwer/s3testqwer1/','createtest',1000000,0,stor='s3')
+    create_hdf5_1d(2560000000, '/group_workspaces/jasmin/hiresgw/vol1/mj07/','createtest',1000000,0)
     '''size = long(sys.argv[3]) # in bytes
     path = sys.argv[1]
     fname = sys.argv[2]
