@@ -1,21 +1,18 @@
 
-userbased_nc_bench code
-_______________________
+#userbased\_nc\_bench code
 
 
 
-Use
----
-
-::
-
- mpirun userbased_nc_bench.py configfile
+###Use
 
 
-Config file
------------
-Arguments
-*********
+`mpirun userbased_nc_bench.py configfile`
+
+
+###Config file
+
+####Arguments
+
 - language=Python|C
 
    Language to use to read the data. Note, Python is always used to do the writing.
@@ -32,74 +29,93 @@ Arguments
 - rundir=/run/directory/
 
 - readpattern=s|h
+
    Read write pattern. Either sequential (s) or striding (h). In 1d tests the striding pattern is read one, skip three. In 4d tests the striding pattern reads the slowest varying dimension first, then iterates next along the fastest.
 
 - randcount=0
+
    Not used in current implementation.
 
 - buffersize=
+
     Size of the read/write buffer. Constraint that the buffer size must fit a whole number of times into the dimension for the 4d test
 
 - filesize=
+
     Size of the file to create in Bytes
 
 - sharedfile=1|0
+
    Not used in current implementation.
 
 - mpiio=1|0
+
    Not used in current implementation
 
 - cleanup=1|0
+
    Determines whether created files are removed after read tests. Not used with ``stor=S3``
 
 - dim=1d|4d
+
    Either one-dimensional tests, or four-dimensional tests. Must match the dimensions of the file in read only tests.
 
 - test=r|w|rw
+
    Which tests to run. Read only, write only, or write then read.
+   
 - var=ncfilevar
+
    Name of the variable in the NetCDF/HDF5 file
 
 - results=/dir/to/output/results.csv
 
 - objsize=-1
+
    Size of the object in the S3 object store
 
 - stor=filesystem|s3
+
    Either POSIX filesystem or object store with S3 interface using S3-netcdf4-python
 
 
-Example
-*******
+####Example
+
 Read from a specified existing data file using h5pyd
 
-::
 
- language=Python
- filetype=hdf
- floc=/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/
- fname=comp_test_uxy_c0.nc
- output=/home/users/mjones07/userbased-bench/
- rundir=/home/users/mjones07/userbased-bench/
- readpattern=s
- randcount=0
- buffersize=1132462080
- filesize=256000000000
- sharedfile=0
- mpiio=0
- cleanup=0
- dim=4d
- test=r
- var=u
- results=/home/users/mjones07/userbased-bench/4dresults
- objsize=-1
- stor=filesystem
+```
+language=Python
+filetype=hdf
+floc=/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/
+fname=comp_test_uxy_c0.nc
+output=/home/users/mjones07/userbased-bench/
+rundir=/home/users/mjones07/userbased-bench/
+readpattern=s
+randcount=0
+buffersize=1132462080
+filesize=256000000000
+sharedfile=0
+mpiio=0
+cleanup=0
+dim=4d
+test=r
+var=u
+results=/home/users/mjones07/userbased-bench/4dresults
+objsize=-1
+stor=filesystem
+```
 
 Non-enabled features
 --------------------
 - C - NetCDF4 file read
+
 - C - plain binary file read
+
 - Shared file
+
 - MPIIO
+
 - Random reads
+
 - Proper HDF5 implementation
