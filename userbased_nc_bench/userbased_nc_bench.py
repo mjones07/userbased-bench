@@ -17,7 +17,7 @@ from time import time, clock
 def check_files(setup, mpisize, mpirank):
     ''' Checks whether the files required already exist, if so returns True, else False
     '''
-    
+
     #os.path.isfile('')
     try:
         if setup['stor'] == 's3':
@@ -36,16 +36,16 @@ def check_files(setup, mpisize, mpirank):
             size = statinfo.st_size
             if abs(setup['filesize']-size) > 100000: # allow 100KB size difference
                 return False
-                
+
             else:
                 print 'File exists, skipping creation.'
                 return True
-            
+
     except:
         return False
 
 def cleanup(setup, mpisize, mpirank):
-    ''' Remove files if nececery. 
+    ''' Remove files if nececery.
     '''
     if setup['filetype'] == 'nc':
             fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
@@ -64,14 +64,14 @@ def create_files(setup, mpisize, mpirank):
         elif setup['filetype'] == 'nc':
             size = netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'])
         elif setup['filetype'] == 'hdf':
-            netcdf_creation.create_hdf5_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'])
-            size = setup['filesize']
+            size = netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'])
+            #size = setup['filesize']
         elif setup['filetype'] == 'bin':
             size = setup['filesize']
             fpath = setup['floc']+setup['fname']+str(mpisize-1)
             with open(fpath, 'wb') as fout:
                 fout.write(os.urandom(setup['filesize']))
-        
+
     else:
         print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpirank-1)+'.nc')
         if setup['stor'] == 's3':
@@ -87,7 +87,7 @@ def create_files(setup, mpisize, mpirank):
             with open(fpath, 'wb') as fout:
                 fout.write(os.urandom(setup['filesize']))
     return size, buffersize
-        
+
 
 def get_setup(setup_config_file):
     ''' parse the config file and store in the dict
@@ -110,15 +110,15 @@ def main():
     mpisize = comm.Get_size()
     #rank = 0
     #mpisize = 1
-    
-    
+
+
     setup_config_file = sys.argv[1]
     setup = get_setup(setup_config_file)
     os.system ('touch %s' % setup['results'])
 
     if setup['objsize'] == 0:
         setup['objsize']=sys.argv[2]
-        
+
     print setup
     if setup['test'] == 'w' or setup['test'] == 'wr' or setup['test'] == 'rw':
         writetime=time()
@@ -133,7 +133,7 @@ def main():
                         writeres =  'write,%s,objsize=%s,%s,%s,%s,%s' % (rank,setup['objsize'],size,buffersize,time()-writetime,clock()-writeclock,size/1000000/(time()-writetime))
                     else:
                         writeres =  'write,%s,%s,%s,%s,%s' % (rank,size,buffersize,time()-writetime,clock()-writeclock,size/1000000/(time()-writetime))
-        
+
         else:
             if not check_files(setup, mpisize, rank):
                 size = create_files(setup, mpisize, rank)
@@ -143,22 +143,22 @@ def main():
                     writeres =  'write,%s,%s,%s,%s,%s' % (rank,size,time()-writetime,clock()-writeclock,size/1000000/(time()-writetime))
         print >> open(setup['results'],'a'), writeres
         comm.barrier()
-    
+
     if setup['test'] == 'r' or setup['test'] == 'wr' or setup['test'] == 'rw':
-        
+
         fid = setup['floc']+setup['fname']
         # use options to decide which test script to run
         if setup['language'] == 'Python' and setup['filetype'] == 'nc' and setup['stor'] == 's3':
-            
+
                 from readfile_s3 import readfile_1d as readfile
-            
+
                 results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
-            
+
 
         elif setup['language'] == 'Python' and setup['filetype'] == 'nc':
             if setup['dim']=='1d':
                 from readfile_nc import readfile_1d as readfile
-                
+
                 results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
             elif setup['dim']=='4d':
                 from readfile_nc import readfile_4d as readfile
@@ -187,7 +187,7 @@ def main():
 
         elif  setup['language'] == 'Python' and setup['filetype'] == 'bin':
             from readfile_bin import main as readfile
-            
+
             results = 'read,'+readfile(rank, fid+str(rank), setup['readpattern'], setup['buffersize'], setup['randcount'])
 
         elif  setup['language'] == 'C' and setup['filetype'] == 'nc':
@@ -200,14 +200,14 @@ def main():
             output = subprocess.check_output(cwd+'/readfile_bin %s %s %s' % (fid+str(rank), setup['buffersize'], setup['readpattern']),shell=True)
             results =  'read,'+str(rank)+','+output.split('\n')[3]
 
-        else: 
+        else:
             raise ValueError('Combination of language and filetype not supported')
 
         print >> open(setup['results'],'a'), results
     if setup['test'] == 'w' or setup['test'] == 'wr' or setup['test'] == 'rw':
         if setup['cleanup']:
             cleanup(setup,mpisize,rank)
-    
+
 
 if __name__ == '__main__':
     main()

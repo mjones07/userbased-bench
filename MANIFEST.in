@@ -1,0 +1,5 @@
+include config*
+include README.rst
+include userbased_nc_bench/readfile_bin.c
+include userbased_nc_bench/readfile_nc.c
+include userbased_nc_bench/Makefile
