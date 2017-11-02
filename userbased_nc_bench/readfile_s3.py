@@ -11,10 +11,16 @@ def seq_read_1d(mpirank, fid, num_elements):
     #print fid
     start = time()
     cpu_time = clock()
-    f = Dataset(fid,'r')
+    f = Dataset(fid,'r', diskless=True)
+    print f
+    print fid
     var = f.variables['var']
-
-    num_reads = var.shape/num_elements
+    print var[:]
+    print var.shape
+    print data.shape
+    print 'WARNING: Does not currently use buffer size or read pattern'
+    bytes_read = 8*var.shape[0]*var.shape[1]*var.shape[2]*var.shape[3]
+    '''num_reads = var.shape/num_elements
 
     bytes_read = 0
     
@@ -22,7 +28,7 @@ def seq_read_1d(mpirank, fid, num_elements):
         ind_slice0 = long(i*num_elements)
         ind_slice1 = long(i*num_elements+num_elements)
         bytes_read += 8*len(var[ind_slice0:ind_slice1])
-
+    '''
     cpu_time = clock() - cpu_time
     wall_time = time()-start
     rate = bytes_read/wall_time
@@ -79,7 +85,7 @@ def rand_read(mpirank, fid, num_elements, rand_num):
 def readfile_1d(mpirank, fid, readmode, readsize, rand_num):
     # Readsize in elements
     num_elements = np.ceil(readsize/8.)
-
+    assert readmode == 's', 'Only sequential reads currently supported for S3 netcdf4'
     if readmode == 's':
         results = seq_read_1d(mpirank, fid, num_elements)
     elif readmode == 'h':

@@ -2,13 +2,13 @@
 
 import sys
 import numpy as np
-from netCDF4 import Dataset
+import h5pyd
 from time import time, clock
 
 def seq_read_1d(mpirank, fid, num_elements):
     print fid
-    f = Dataset(fid,'r')
-    var = f.variables['var']
+    f = h5py.File(fid,'r')
+    var = f['data']
 
     num_reads = var.shape/num_elements
 
@@ -29,8 +29,8 @@ def seq_read_1d(mpirank, fid, num_elements):
 
 def hop_read_1d(mpirank, fid, num_elements):
 
-    f = Dataset(fid,'r')
-    var = f.variables['var']
+    f = h5py.File(fid,'r')
+    var = f['data']
 
     num_reads = var.shape/num_elements
 
@@ -51,8 +51,8 @@ def hop_read_1d(mpirank, fid, num_elements):
 
 def rand_read(mpirank, fid, num_elements, rand_num):
 
-    f = Dataset(fid,'r')
-    var = f.variables['var']
+    f = h5py.File(fid,'r')
+    var = f['data']
 
 
     rand_starts = [int(np.ceil(x)) for x in np.random.random(rand_num)*(var.shape-num_elements)]
@@ -88,8 +88,8 @@ def readfile_1d(mpirank, fid, readmode, readsize, rand_num):
 
 def readfile_4d(mpirank, fid, pattern, buffersize, v, rand_num):
 
-    f = Dataset(fid,'r')
-    var = f.variables[v]
+    f = h5py.File(fid,'r')
+    var = f[v]
     dim1 = var.shape[0]
     dim2 = var.shape[1]
     dim3 = var.shape[2]
@@ -245,15 +245,15 @@ def readfile_4d(mpirank, fid, pattern, buffersize, v, rand_num):
     rate = dataread/wall_time
 
     return '%s,%s,%s,%s,%s,%s,%s,%s'\
-        % (mpirank,dim1*dim2*dim3*dim4*8, dataread, buffersize,  pattern,cpu_time, wall_time, rate/1000**2)
+        % (mpirank,dim1*dim2*dim3*dim4*8, dataread, buffersize, pattern, cpu_time, wall_time, rate/1000**2)
 
 if __name__ == '__main__':
-    fid = sys.argv[1]
+    '''fid = sys.argv[1]
     readmode = sys.argv[2]
     readsize = float(sys.argv[3])
     if len(sys.argv) == 5:
         rand_num = int(sys.argv[4])
     else:
         rand_num = None
-
-    readfile_1d(mpirank, fid, readmode, readsize, rand_num)
+    '''
+    readfile_4d(0, '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/comp_test_uxy_c0.nc', 'h', 2*768*240*1024*8, 'u', 0)
