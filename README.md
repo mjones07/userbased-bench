@@ -15,10 +15,10 @@
 
 - language=Python|C
 
-   Language to use to read the data. Note, Python is always used to do the writing.
+    Language to use to read the data. Note, Python is always used to do the writing.
 
 - filetype=nc|bin|hdf
-   File type to use, either NetCDF4, plain binary, or HDF5. Note, currently hdf read nc files using h5py library, and writes NetCDF4 files...
+    File type to use, either NetCDF4, plain binary, or HDF5. Note, currently hdf read nc files using h5py library, and writes NetCDF4 files...
 
 - floc= /data/file/location/
 
@@ -30,11 +30,11 @@
 
 - readpattern=s|h
 
-   Read write pattern. Either sequential (s) or striding (h). In 1d tests the striding pattern is read one, skip three. In 4d tests the striding pattern reads the slowest varying dimension first, then iterates next along the fastest.
+    Read write pattern. Either sequential (s) or striding (h). In 1d tests the striding pattern is read one, skip three. In 4d tests the striding pattern reads the slowest varying dimension first, then iterates next along the fastest.
 
 - randcount=0
 
-   Not used in current implementation.
+    Not used in current implementation.
 
 - buffersize=
 
@@ -46,37 +46,37 @@
 
 - sharedfile=1|0
 
-   Not used in current implementation.
+    Not used in current implementation.
 
 - mpiio=1|0
 
-   Not used in current implementation
+    Not used in current implementation
 
 - cleanup=1|0
 
-   Determines whether created files are removed after read tests. Not used with ``stor=S3``
+    Determines whether created files are removed after read tests. Not used with ``stor=S3``
 
 - dim=1d|4d
 
-   Either one-dimensional tests, or four-dimensional tests. Must match the dimensions of the file in read only tests.
+    Either one-dimensional tests, or four-dimensional tests. Must match the dimensions of the file in read only tests.
 
 - test=r|w|rw
 
-   Which tests to run. Read only, write only, or write then read.
+    Which tests to run. Read only, write only, or write then read.
    
 - var=ncfilevar
 
-   Name of the variable in the NetCDF/HDF5 file
+    Name of the variable in the NetCDF/HDF5 file
 
 - results=/dir/to/output/results.csv
 
 - objsize=-1
 
-   Size of the object in the S3 object store
+    Size of the object in the S3 object store
 
 - stor=filesystem|s3
 
-   Either POSIX filesystem or object store with S3 interface using S3-netcdf4-python
+    Either POSIX filesystem or object store with S3 interface using S3-netcdf4-python
 
 
 ####Example
