@@ -38,7 +38,7 @@
 
 - buffersize=
 
-    Size of the read/write buffer. Constraint that the buffer size must fit a whole number of times into the dimension for the 4d test
+    Size of the read/write buffer. Constraint that the buffer size must fit a whole number of times into the dimension for the 4d test. Can either be a number of bytes, or numbers with 'x' in between, e.g. '1024x240' showing the dimension size, which is then multiplied into bytes internally.
 
 - filesize=
 

@@ -99,6 +99,8 @@ def get_setup(setup_config_file):
             setup[line.split('=')[0]] = long(line.split('=')[1])
         except:
             setup[line.split('=')[0]] = line.split('=')[1].strip()
+            if line.split('=')[0] == 'buffersize' and 'x' in line.split('=')[1]:
+                setup[line.split('=')[0]] = reduce(lambda x, y: x*y, [long(x) for x in line.split('=')[1].strip().split('x')])*8
 
     return setup
 
