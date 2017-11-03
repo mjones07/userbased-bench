@@ -113,8 +113,6 @@ Non-enabled features
 --------------------
 - C - NetCDF4 file read
 
-- C - plain binary file read
-
 - Shared file
 
 - MPIIO
