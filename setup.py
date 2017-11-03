@@ -60,7 +60,8 @@ setup(name='userbased-nc-bench',
 			'netCDF4',
 			'minio',
 			'h5py',
-			'h5pyd'
+			'h5pyd',
+            'mpi4py'
 			],
     package_data = {'userbased_nc_bench': package_data},
 	dependency_links=['https://github.com/cedadev/S3-netcdf-python'],
