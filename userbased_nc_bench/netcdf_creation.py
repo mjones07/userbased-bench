@@ -36,7 +36,7 @@ def create_netcdf(size, path):
 
     f.close()
 
-def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='var', stor='filesystem',objsize=-1):
+def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='var', stor='filesystem',objsize=-1,chunking=0):
     # I think things will work better if file size is base 2
     assert ispower2(size), 'Please provide a file size as base 2'
     #assert ispower2(buffersize), 'Pleaseprovide a buffer size as base 2'
@@ -48,8 +48,8 @@ def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='v
     # Calculate dim size
     dsize = int(np.ceil((size/8)**0.25))
 
+    # parse chunking option
     
-
 
     print dsize
     if stor == 'filesystem':
@@ -79,7 +79,15 @@ def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='v
     dim4d = f.createVariable('dim4','i4',('dim4',))
     dim4d[:] = range(dsize)
     #var = f.createVariable('var','f8',('dim1','dim2','dim3','dim4'),chunksizes=(430,1,1,430))#,chunksizes=(430,1,430,430)
-    var = f.createVariable(var,'f8',('dim1','dim2','dim3','dim4'))
+    if chunking == 0:
+        var = f.createVariable(var,'f8',('dim1','dim2','dim3','dim4'),contiguous=True)
+    else:
+        split_chunk_arg = chunking.split('x')
+        c1 = int(split_chunk_arg[0])
+        c2 = int(split_chunk_arg[1])
+        c3 = int(split_chunk_arg[2])
+        c4 = int(split_chunk_arg[3])
+        var = f.createVariable(var,'f8',('dim1','dim2','dim3','dim4'),contiguous=False, chunksizes=(c1,c2,c3,c4))
     print var
 
     # calculate the size of each dimension in bytes to compare to buffer size

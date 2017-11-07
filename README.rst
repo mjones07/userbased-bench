@@ -68,6 +68,12 @@ Arguments
 - stor=filesystem|s3
    Either POSIX filesystem or object store with S3 interface using S3-netcdf4-python
 
+- chunking=0
+   Either 0 (no chunking) or 4d chunk shape e.g. 10x24x21x30
+
+- forcewrite=1
+   Either 1 or 0. 1 will force the overwrite on write tests, 0 will check if the file exists already.
+
 
 Example
 *******
@@ -94,6 +100,8 @@ Read from a specified existing data file using h5pyd
  results=/home/users/mjones07/userbased-bench/4dresults
  objsize=-1
  stor=filesystem
+ chunking=0
+ forcewrite=1
 
 Non-enabled features
 --------------------

@@ -25,6 +25,8 @@ def check_files(setup, mpisize, mpirank):
                 return False
             else:
                 return True
+        elif setup['forcewrite']:
+            return False
         else:
             if setup['filetype'] == 'nc':
                 fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
@@ -60,9 +62,13 @@ def create_files(setup, mpisize, mpirank):
     if mpirank == 0:
         print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpisize-1)+'.nc')
         if setup['stor'] == 's3':
-            size,buffersize = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'],objsize=int(setup['objsize']))
+            size,buffersize = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'],objsize=int(setup['objsize']),chunking=setup['chunking'])
+        elif setup['filetype'] == 'nc' and setup['dim'] == '4d':
+            size,buffersize = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'],chunking=setup['chunking'])
         elif setup['filetype'] == 'nc':
             size = netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'])
+        elif setup['filetype'] == 'hdf' and setup['dim'] == '4d':
+            size,buffersize = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'],chunking=setup['chunking'])
         elif setup['filetype'] == 'hdf':
             size = netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'])
             #size = setup['filesize']
@@ -75,12 +81,17 @@ def create_files(setup, mpisize, mpirank):
     else:
         print 'mpi rank %s creating file %s' % (mpirank, setup['floc']+setup['fname']+str(mpirank-1)+'.nc')
         if setup['stor'] == 's3':
-            size = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, stor=setup['stor'], objsize=int(setup['objsize']))
+            size,buffersize = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, stor=setup['stor'], objsize=int(setup['objsize']),chunking=setup['chunking'])
+        elif setup['filetype'] == 'nc' and setup['dim'] == '4d':
+            size,buffersize = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, stor=setup['stor'],chunking=setup['chunking'])
         elif setup['filetype'] == 'nc':
             size = netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, stor=setup['stor'])
+        elif setup['filetype'] == 'hdf' and setup['dim'] == '4d':
+            #size = setup['filesize']
+            size,buffersize = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, stor=setup['stor'],chunking=setup['chunking'])
         elif setup['filetype'] == 'hdf':
-            size = setup['filesize']
-            netcdf_creation.create_hdf5_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, stor=setup['stor'])
+            #size = setup['filesize']
+            size = netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1, stor=setup['stor'])
         elif setup['filetype'] == 'bin':
             size = setup['filesize']
             fpath = setup['floc']+setup['fname']+str(mpirank-1)
@@ -138,7 +149,7 @@ def main():
 
         else:
             if not check_files(setup, mpisize, rank):
-                size = create_files(setup, mpisize, rank)
+                size,buffersize = create_files(setup, mpisize, rank)
                 if setup['stor'] == 's3':
                     writeres =  'write,%s,objsize=%s,%s,%s,%s,%s' % (rank,setup['objsize'],size,time()-writetime,clock()-writeclock,size/1000000/(time()-writetime))
                 else:
