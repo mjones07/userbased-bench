@@ -18,11 +18,14 @@
     Language to use to read the data. Note, Python is always used to do the writing.
 
 - filetype=nc|bin|hdf
+
     File type to use, either NetCDF4, plain binary, or HDF5. Note, currently hdf read nc files using h5py library, and writes NetCDF4 files...
 
 - floc= /data/file/location/
 
 - fname=filename(.nc)
+
+    Name of the data file. .nc is only required when reading from existing 4d files.
 
 - output=/log/output/file/loc/
 
@@ -119,8 +122,6 @@ forcewrite=1
 Non-enabled features
 --------------------
 - C - NetCDF4 file read
-
-- C - plain binary file read
 
 - Shared file
 
