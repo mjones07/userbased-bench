@@ -10,6 +10,7 @@ import netcdf_creation
 import subprocess
 import numpy as np
 from time import time, clock
+import boto3
 
 # initially just store the options in a dict
 # defaults are set
@@ -49,11 +50,29 @@ def check_files(setup, mpisize, mpirank):
 def cleanup(setup, mpisize, mpirank):
     ''' Remove files if nececery.
     '''
-    if setup['filetype'] == 'nc':
-            fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
+    if setup['stor'] == 's3':
+        s3 = boto3.resource('s3',endpoint_url=setup['s3_endpoint'], aws_access_key_id=setup['s3_access_key'], aws_secret_access_key=setup['s3_secret_key'])
+        print setup['fname']+str(mpirank)+'/'+setup['fname']+str(mpirank)+'_'+setup['var']
+        obs = s3.Bucket(setup['floc'].split('/')[-2]).objects.filter(Prefix=setup['fname']+str(mpirank)+'/'+setup['fname']+str(mpirank)+'_'+setup['var'])
+        obs.delete()
+        '''ob_to_del = s3.meta.client.list_objects(Bucket=setup['floc'].split('/')[-2],Prefix=setup['floc'].split('/')[-2]+'/'+setup['fname']+'/')
+        delete_keys = {'Objects':[]}
+        delete_keys['Objects']=[{'Key' : k} for k in [obj['Key'] for obj in ob_to_del.get('Contents', [])]]
+        print delete_keys
+        s3.meta.client.delete_objects(Bucket=setup['floc'].split('/')[-2], Delete=delete_keys)'''
+        s3.meta.client.delete_object(Bucket=setup['floc'].split('/')[-2], Key=setup['fname']+str(mpirank)+'.nc')
+    elif setup['filetype'] == 'nc':
+        fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
+        os.remove(fpath)
     elif setup['filetype'] == 'bin':
-            fpath = setup['floc']+setup['fname']+str(mpirank)
-    os.remove(fpath)
+        fpath = setup['floc']+setup['fname']+str(mpirank)
+        os.remove(fpath)
+    
+    elif setup['filetype'] == 'CFA':
+        fpath = setup['floc']+setup['fname']+str(mpirank)+'.nc'
+    else:
+        print 'WARNING: Unable to remove files'
+    
 
 def create_files(setup, mpisize, mpirank):
     ''' Creates the required files
@@ -163,9 +182,9 @@ def main():
         # use options to decide which test script to run
         if setup['language'] == 'Python' and setup['filetype'] == 'nc' and setup['stor'] == 's3':
 
-                from readfile_s3 import readfile_1d as readfile
+                from readfile_s3 import readfile_4d as readfile
 
-                results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+                results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
 
 
         elif setup['language'] == 'Python' and setup['filetype'] == 'nc':

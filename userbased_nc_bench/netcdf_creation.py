@@ -36,7 +36,7 @@ def create_netcdf(size, path):
 
     f.close()
 
-def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='var', stor='filesystem',objsize=-1,chunking=0):
+def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', varname='var', stor='filesystem',objsize=-1,chunking=0):
     # I think things will work better if file size is base 2
     assert ispower2(size), 'Please provide a file size as base 2'
     #assert ispower2(buffersize), 'Pleaseprovide a buffer size as base 2'
@@ -47,7 +47,7 @@ def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='v
     
     # Calculate dim size
     dsize = int(np.ceil((size/8)**0.25))
-
+    
     # parse chunking option
     
 
@@ -80,16 +80,16 @@ def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='v
     dim4d[:] = range(dsize)
     #var = f.createVariable('var','f8',('dim1','dim2','dim3','dim4'),chunksizes=(430,1,1,430))#,chunksizes=(430,1,430,430)
     if chunking == 0:
-        var = f.createVariable(var,'f8',('dim1','dim2','dim3','dim4'),contiguous=True)
+        var = f.createVariable(varname,'f8',('dim1','dim2','dim3','dim4'),contiguous=True)
     else:
         split_chunk_arg = chunking.split('x')
         c1 = int(split_chunk_arg[0])
         c2 = int(split_chunk_arg[1])
         c3 = int(split_chunk_arg[2])
         c4 = int(split_chunk_arg[3])
-        var = f.createVariable(var,'f8',('dim1','dim2','dim3','dim4'),contiguous=False, chunksizes=(c1,c2,c3,c4))
-    print var
-
+        var = f.createVariable(varname,'f8',('dim1','dim2','dim3','dim4'),contiguous=False, chunksizes=(c1,c2,c3,c4))
+    
+    #print var[0,0,0,0]
     # calculate the size of each dimension in bytes to compare to buffer size
     one_size = 8*dsize # size of 1 dim
     two_size = 8*dsize**2 # size of 2 dim, etc
@@ -177,7 +177,8 @@ def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='v
                 '''
 
         elif buffersize >= three_size and buffersize < four_size:
-            # buffersize must be whole fraction of the dimensions 
+            # buffersize must be whole fraction of the dimensions
+            print dsize, dsize**4/(buffersize/8.)
             assert (dsize**4)%(buffersize/8.) == 0, ValueError('Buffersize must be whole fraction of dimension 4')
             # then iterate over the remainder of dim3
             # calculate number of whole buffers in dim3
@@ -189,6 +190,7 @@ def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='v
             
             # if remainder is close to buffersize then continue, if a small remainder then recalculate buffer size
             # start with keeping buffer if rem is greater than 75% of buffer
+            print var.shape, buff_el
             if (buffersize-rem_from_dim*8)/buffersize > 0.75:
                 if not rem_from_dim == 0:
                     num_buff -= 1
@@ -197,7 +199,11 @@ def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='v
                     print 'Final buffer size in dim3 will be %s bytes' % fin_buff
                 
                 for i1 in range(dsize):
-                    var[int(i1*buff_el):int((i1+1)*buff_el),:,:,:] = np.random.random((int(buff_el),dsize,dsize,dsize))
+                    print i1
+                    data = np.random.random((int(buff_el),dsize,dsize,dsize))
+                    print data.shape
+                    print int(i1*buff_el), int((i1+1)*buff_el)
+                    var[int(i1*buff_el):int((i1+1)*buff_el),:,:,:] = data
                     
             else:
                 # this section should no longer be needed due to assertion on buffer size
@@ -227,7 +233,7 @@ def create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='v
     elif objsize==-1:
         f.close()
     else:
-        f.close(objsize=objsize)
+        f.close()#(objsize=objsize)
     
     try:
         return size, new_buffer
@@ -272,7 +278,7 @@ def create_netcdf_1d(size, path, fname, buffersize, mpirank, stor='filesystem',o
     elif objsize==-1:
         f.close()
     else:
-        f.close(objsize=objsize)
+        f.close()#(objsize=objsize)
     return size 
 
 def create_hdf5_1d(size, path, fname, buffersize, mpirank, stor='filesystem'):
@@ -296,8 +302,10 @@ def create_hdf5_1d(size, path, fname, buffersize, mpirank, stor='filesystem'):
 
 
 if __name__ == '__main__':
-    create_netcdf_4d(1*1024**3, '/group_workspaces/jasmin/hiresgw/vol1/mj07/','test4d',1*108**3*8,'',stor='filesystem')
-    #create_netcdf_4d(1000000000, 's3://s3testqwer/s3testqwer1/','testS3',10000000,0,stor='s3',objsize=1000000)
+    #create_netcdf_4d(1*1024**3, '/group_workspaces/jasmin/hiresgw/vol1/mj07/','test4d',1*108**3*8,'',stor='filesystem')
+
+    #create_netcdf_4d(size, path, fname, buffersize, mpirank, pattern='s', var='var', stor='filesystem',objsize=-1,chunking=0):
+    create_netcdf_4d(2**24*8, 's3://s3/mjs3test/','testS3',64**3*8,0,stor='s3',objsize=-1,chunking=0)
     #create_hdf5_1d(2560000000, '/group_workspaces/jasmin/hiresgw/vol1/mj07/','createtest',10000000,0)
     '''size = long(sys.argv[3]) # in bytes
     path = sys.argv[1]
