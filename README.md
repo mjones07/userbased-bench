@@ -23,6 +23,18 @@
 
 - floc= /data/file/location/
 
+- s3_endpoint=http://...
+
+    location of the object store, used in cleanup (s3netcdf has its own way of accessing the object store see its documentation)
+
+- s3_access_key=...
+
+    access key to object store, used in cleanup
+
+- s3_secret_key=...
+
+    secret key to object store, used in cleanup
+
 - fname=filename(.nc)
 
     Name of the data file. .nc is only required when reading from existing 4d files.
@@ -99,6 +111,9 @@ Read from a specified existing data file using h5pyd
 language=Python
 filetype=hdf
 floc=/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/
+s3_endpoint=http://...
+s3_access_key=...
+s3_secret_key=...
 fname=comp_test_uxy_c0.nc
 output=/home/users/mjones07/userbased-bench/
 rundir=/home/users/mjones07/userbased-bench/
@@ -129,4 +144,4 @@ Non-enabled features
 
 - Random reads
 
-- Proper HDF5 implementation
+- Proper HDF5 implementation (writes netcdf files at the moment)
