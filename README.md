@@ -57,7 +57,7 @@
 
 - filesize=
 
-    Size of the file to create in Bytes
+    Size of the file to create in Bytes. note, with a 1D NetCDf4 file, because of the need to create a dimension variable, the file will be twice this size
 
 - sharedfile=1|0
 
