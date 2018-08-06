@@ -90,6 +90,7 @@ def readfile_4d(mpirank, fid, pattern, buffersize, v, rand_num):
 
     f = Dataset(fid,'r')
     var = f.variables[v]
+    #var.set_var_chunk_cache(size=60*1000**2)
     dim1 = var.shape[0]
     dim2 = var.shape[1]
     dim3 = var.shape[2]
@@ -136,8 +137,7 @@ def readfile_4d(mpirank, fid, pattern, buffersize, v, rand_num):
             
             dataread = 0
             for i1 in range(dim1):
-                for i2 in range(dim2):
-                
+                for i2 in range(num_buff):
                     data = var[i1,int(i2*buff_el):int((i2+1)*buff_el),:,:]
                     dataread += reduce(lambda x, y: x*y, data.shape)*8
             datareadMi = dataread/1024**2
@@ -157,7 +157,7 @@ def readfile_4d(mpirank, fid, pattern, buffersize, v, rand_num):
             print 'Filling by iterating over dim 1 with %s buffers of size %sx%sx%sx%s elements, and a remainder of %sx%sx%sx%s elements' % (num_buff, buff_el,dim2,dim3,dim4,rem_from_dim, dim2,dim3,dim4)
             
             dataread = 0
-            for i1 in range(dim1):
+            for i1 in range(num_buff):
                 data = var[int(i1*buff_el):int((i1+1)*buff_el),:,:,:]
                 dataread += reduce(lambda x, y: x*y, data.shape)*8
             datareadMi = dataread/1024**2

@@ -8,6 +8,8 @@ sys.path.append(os.path.expanduser("~/s3netcdf/S3-netcdf-python/"))
 from S3netCDF4._s3netCDF4 import s3Dataset as Dataset
 
 def seq_read_1d(mpirank, fid, num_elements):
+    '''NOT CURRENTLY USED FOR S3 READS
+    '''
     #print fid
     start = time()
     cpu_time = clock()
@@ -37,7 +39,8 @@ def seq_read_1d(mpirank, fid, num_elements):
         % (mpirank,var.shape[0]*8, bytes_read, num_elements*8, num_reads[0], cpu_time, wall_time, rate/1000**2)
 
 def hop_read_1d(mpirank, fid, num_elements):
-
+    '''NOT CURRENTLY USED FOR S3 READS
+    '''
     f = Dataset(fid,'r')
     var = f.variables['var']
 
@@ -59,7 +62,8 @@ def hop_read_1d(mpirank, fid, num_elements):
         % (mpirank, var.shape[0]*8, bytes_read, num_elements*8, num_reads[0], cpu_time, wall_time, rate/1000**2)
 
 def rand_read(mpirank, fid, num_elements, rand_num):
-
+    '''NOT CURRENTLY USED FOR S3 READS
+    '''
     f = Dataset(fid,'r', diskless=True)
     var = f.variables['var']
 
@@ -83,7 +87,10 @@ def rand_read(mpirank, fid, num_elements, rand_num):
         % (mpirank, var.shape[0]*8, bytes_read, num_elements*8, rand_num, cpu_time, wall_time, rate/1000**2)
 
 def readfile_1d(mpirank, fid, readmode, readsize, rand_num):
+    '''NOT CURRENTLY USED FOR S3 READS
+    '''
     # Readsize in elements
+
     num_elements = np.ceil(readsize/8.)
     assert readmode == 's', 'Only sequential reads currently supported for S3 netcdf4'
     if readmode == 's':
@@ -96,6 +103,17 @@ def readfile_1d(mpirank, fid, readmode, readsize, rand_num):
     return results
 
 def readfile_4d(mpirank, fid, pattern, buffersize, v, rand_num):
+    '''
+
+    :param mpirank: rank from MPI
+    :param fid: data file location
+    :param pattern: read pattern s|h
+    :param buffersize: size of each read
+    :param v: variable to read from nc file
+    :param rand_num: number of buffers to read from file in random mode, not cuurently implemented
+    :return: string of resutls
+    '''
+
 
     f = Dataset(fid,'r')
     var = f.getVariable(v)
@@ -168,6 +186,7 @@ def readfile_4d(mpirank, fid, pattern, buffersize, v, rand_num):
             
             dataread = 0
             for i1 in range(dim1):
+                print 'filling as : ', int(i1*buff_el), int((i1+1)*buff_el)
                 data = var[int(i1*buff_el):int((i1+1)*buff_el),:,:,:]
                 dataread += reduce(lambda x, y: x*y, data.shape)*8
             datareadMi = dataread/1024**2

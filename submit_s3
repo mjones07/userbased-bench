@@ -1,3 +1,3 @@
 #!/bin/bash
 source ~/virtenv/bin/activate
-~/userbased-bench/userbased_nc_bench/userbased_nc_bench.py $1 $2
+python2.7 -m cProfile -o  ~/userbased-bench/output/profile.out ~/userbased-bench/userbased_nc_bench/userbased_nc_bench.py $1 $2
