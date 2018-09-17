@@ -91,14 +91,27 @@ def readfile_4d(mpirank, fid, pattern, buffersize, v, rand_num):
     f = Dataset(fid,'r')
     var = f.variables[v]
     #var.set_var_chunk_cache(size=60*1000**2)
-    dim1 = var.shape[0]
-    dim2 = var.shape[1]
-    dim3 = var.shape[2]
-    dim4 = var.shape[3]
+    try:
+        dim1 = var.shape[0]
+        dim2 = var.shape[1]
+        dim3 = var.shape[2]
+        dim4 = var.shape[3]
+    except IndexError:
+        pass
     start = time()
     cpu_time = clock()
 
-    if pattern == 's': # serial write
+    if buffersize == 'all':
+        data = var[:]
+        dataread = np.prod(data.shape)*8
+        datareadMi = np.prod(data.shape)*8/1024**2
+        cpu_time = clock() - cpu_time
+        wall_time = time()-start
+        rate = dataread/wall_time
+        return '%s,%s,%s,%s,%s,%s,%s,%s'\
+        % (mpirank,np.prod(data.shape)*8, dataread, buffersize,  pattern,cpu_time, wall_time, rate/1000**2)
+
+    elif pattern == 's': # serial write
         # if the buffer is larger than one dim, but smaller than two
         one_size = dim4*8
         two_size = dim4*dim3*8

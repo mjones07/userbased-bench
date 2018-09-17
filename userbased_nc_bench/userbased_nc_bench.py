@@ -194,10 +194,41 @@ def main():
         assert setup['test'] == 'r', 'Only writes are used with OpenDAP tests'
         fids = glob('/group_workspaces/jasmin2/atsrrepro/mjones07/test*.nc')
         shuffle(fids)
-        fid = setup['floc']+fids[rank].split('/')[-1]
+        if rank<64:
+            fid = setup['floc']+fids[rank].split('/')[-1]
+        elif rank < 128:
+            fid = setup['floc']+fids[rank-64].split('/')[-1]
+        elif rank < 192:
+            fid = setup['floc']+fids[rank-128].split('/')[-1]
+        elif rank < 256:
+            fid = setup['floc']+fids[rank-192].split('/')[-1]
         from readfile_nc import readfile_4d as readfile
         results = 'read,' + 'objsize=' + str(setup['stor']) + ',' + readfile(rank,fid,setup['readpattern'], setup['buffersize'],setup['var'],0)
 
+    elif setup['stor'] == 'pydap':
+        assert setup['test'] == 'r', 'Only writes are used with OpenDAP tests'
+        fids = glob('/group_workspaces/jasmin2/atsrrepro/mjones07/test*.nc')
+        shuffle(fids)
+        fid = setup['floc'] + fids[rank].split('/')[-1]
+        from readfile_OD import readfile
+        results = 'read,' + 'objsize=' + str(setup['stor']) + ',' + readfile(fid, setup['readpattern'],
+                                                                             setup['buffersize'], setup['var'])
+
+    elif setup['stor'] == 'JS':
+        fid = setup['floc']
+        from readfile_nc import readfile_4d as readfile
+        results = 'read,' + 'objsize=' + str(setup['stor']) + ',' + readfile(rank,fid,setup['readpattern'], 'all',setup['var'],0)
+    
+    elif setup['stor'] == 'dap4gwshost298':
+        from readfile_nc import readfile_4d as readfile
+        
+        assert setup['test'] == 'r', 'Only writes are used with OpenDAP tests'
+        fids = glob('/group_workspaces/jasmin2/atsrrepro/mjones07/opendap4gwsdata/*.nc')
+        
+        shuffle(fids)
+        fid = setup['floc']+fids[rank].split('/')[-1]
+        print fid
+        results = 'read,' + 'objsize=' + str(setup['stor']) + ',' + readfile(rank,fid,setup['readpattern'], 'all',setup['var'],0)
     elif setup['test'] == 'r' or setup['test'] == 'wr' or setup['test'] == 'rw':
 
         fid = setup['floc']+setup['fname']
