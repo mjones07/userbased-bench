@@ -1,0 +1,11 @@
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn8c32.out
+#BSUB -W 24:00
+#BSUB -n 32
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc

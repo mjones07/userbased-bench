@@ -1,0 +1,65 @@
+Sender: LSF System <lsfadmin@host302.jc.rl.ac.uk>
+Subject: Job 4499372: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_h.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m "host302 host330 host314 host342";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_h> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_h.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m "host302 host330 host314 host342";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_h> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Oct 27 14:31:12 2017.
+Job was executed on host(s) <host302.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct 27 14:35:53 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct 27 14:35:53 2017.
+Terminated at Fri Oct 27 14:40:34 2017.
+Results reported at Fri Oct 27 14:40:34 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_h.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BSUB -m "host302 host330 host314 host342"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_h
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   163.24 sec.
+    Max Memory :                                 11694.58 MB
+    Average Memory :                             6870.33 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   29805 MB
+    Max Processes :                              9
+    Max Threads :                                14
+    Run time :                                   281 sec.
+    Turnaround time :                            562 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 162900
+  daemon proc 162903 on host 192.168.117.102
+    rank 0:  proc 162926
+Host 0 -- ip 192.168.117.102 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 'h', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/testS30.nc
+write,0,10000000000,239.271188974,130.47,41.793581097
+read,0,10000000000,2500000000,1000000.0,10000.0,hopping,1.24,1.2400329113,2016.07552285

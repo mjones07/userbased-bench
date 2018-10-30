@@ -1,0 +1,14 @@
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/testing.out
+#BSUB -W 13:00
+#BSUB -n 16
+#BSUB -R "rusage[mem=10000]"
+#BSUB -M 10000
+
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configfiles/config_OpenDAP_100g_QB_p16

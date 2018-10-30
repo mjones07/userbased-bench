@@ -1,0 +1,2559 @@
+Sender: LSF System <lsfadmin@host179.jc.rl.ac.uk>
+Subject: Job 6806451: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;#BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/cjroberts/ior_run/run_ior.sh -f /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;#BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/cjroberts/ior_run/run_ior.sh -f /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Oct  6 16:50:08 2017.
+Job was executed on host(s) <4*host179.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct  6 18:10:37 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct  6 18:10:37 2017.
+Terminated at Fri Oct  6 18:10:45 2017.
+Results reported at Fri Oct  6 18:10:45 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+#BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/cjroberts/ior_run/run_ior.sh -f /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Exited with exit code 245.
+
+Resource usage summary:
+
+    CPU time :                                   2.00 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   8 sec.
+    Turnaround time :                            4837 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 29592
+  daemon proc 29595 on host 192.168.110.179
+    rank 0:  proc 29599
+    rank 1:  proc 29600
+    rank 2:  proc 29601
+    rank 3:  proc 29602
+Host 0 -- ip 192.168.110.179 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+IOR-3.1.0: MPI Coordinated Test of Parallel I/O
+
+non-option argument: /homes/users/mjones07/userbased-bench/configcnc
+non-option argument: /homes/users/mjones07/userbased-bench/configcnc
+non-option argument: /homes/users/mjones07/userbased-bench/configcnc
+non-option argument: /homes/users/mjones07/userbased-bench/configcnc
+Began: Fri Oct  6 18:10:38 2017
+Command line used: /home/users/cjroberts/ior/bin/ior -f /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configcnc
+Machine: Linux host179.jc.rl.ac.uk
+
+Test 0 started: Fri Oct  6 18:10:38 2017
+Summary:
+	api                = HDF5-1.8.12 (Serial)
+	test filename      = testFile
+	access             = single-shared-file
+	ordering in a file = sequential offsets
+	ordering inter file= no tasks offsets
+	clients            = 4 (4 per node)
+	repetitions        = 1
+	xfersize           = 262144 bytes
+	blocksize          = 1 MiB
+	aggregate filesize = 4 MiB
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+MPI Application rank 1 killed before MPI_Finalize() with signal 11
+Sender: LSF System <lsfadmin@host165.jc.rl.ac.uk>
+Subject: Job 7379067: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;#BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;#BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Oct 12 10:35:48 2017.
+Job was executed on host(s) <4*host165.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Thu Oct 12 10:35:48 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Oct 12 10:35:48 2017.
+Terminated at Thu Oct 12 10:35:50 2017.
+Results reported at Thu Oct 12 10:35:50 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+#BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2.30 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 28375
+  daemon proc 28378 on host 192.168.109.165
+    rank 0:  proc 28382
+    rank 1:  proc 28383
+    rank 2:  proc 28384
+    rank 3:  proc 28385
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.109.165 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 53, in main
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 53, in main
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 53, in main
+    setup = get_setup(setup_config_file)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 53, in main
+    setup = get_setup(setup_config_file)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 35, in get_setup
+    setup = get_setup(setup_config_file)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 35, in get_setup
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 35, in get_setup
+    setup = get_setup(setup_config_file)
+    for line in open(setup_config_file):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 35, in get_setup
+    for line in open(setup_config_file):
+IOError: [Errno 2] No such file or directory: '/homes/users/mjones07/userbased-bench/configcnc'
+    for line in open(setup_config_file):
+IOError: [Errno 2] No such file or directory: '/homes/users/mjones07/userbased-bench/configcnc'
+    for line in open(setup_config_file):
+IOError: [Errno 2] No such file or directory: '/homes/users/mjones07/userbased-bench/configcnc'
+IOError: [Errno 2] No such file or directory: '/homes/users/mjones07/userbased-bench/configcnc'
+Sender: LSF System <lsfadmin@host097.jc.rl.ac.uk>
+Subject: Job 7379129: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;#BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;#BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Oct 12 10:40:21 2017.
+Job was executed on host(s) <4*host097.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Thu Oct 12 10:40:21 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Oct 12 10:40:21 2017.
+Terminated at Thu Oct 12 11:40:07 2017.
+Results reported at Thu Oct 12 11:40:07 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+#BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   4004.77 sec.
+    Max Memory :                                 83.02 MB
+    Average Memory :                             82.28 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   3965 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   3586 sec.
+    Turnaround time :                            3586 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 23800
+  daemon proc 23803 on host 192.168.103.97
+    rank 0:  proc 23807
+    rank 1:  proc 23808
+    rank 2:  proc 23809
+    rank 3:  proc 23810
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.103.97 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+/bin/sh: ./readfile_nc: No such file or directory
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    output = subprocess.check_output('./readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command './readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc 1000000 s' returned non-zero exit status 127
+/bin/sh: ./readfile_nc: No such file or directory
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    output = subprocess.check_output('./readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command './readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc 1000000 s' returned non-zero exit status 127
+/bin/sh: ./readfile_nc: No such file or directory
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    output = subprocess.check_output('./readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command './readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc 1000000 s' returned non-zero exit status 127
+/bin/sh: ./readfile_nc: No such file or directory
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    output = subprocess.check_output('./readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command './readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc 1000000 s' returned non-zero exit status 127
+Sender: LSF System <lsfadmin@host166.jc.rl.ac.uk>
+Subject: Job 7392364: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;#BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;#BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Oct 12 13:00:24 2017.
+Job was executed on host(s) <4*host166.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Thu Oct 12 13:05:58 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Oct 12 13:05:58 2017.
+Terminated at Thu Oct 12 14:06:12 2017.
+Results reported at Thu Oct 12 14:06:12 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+#BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   3981.66 sec.
+    Max Memory :                                 83.81 MB
+    Average Memory :                             81.24 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   3961 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   3614 sec.
+    Turnaround time :                            3948 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 26088
+  daemon proc 26091 on host 192.168.109.166
+    rank 0:  proc 26095
+    rank 1:  proc 26096
+    rank 2:  proc 26097
+    rank 3:  proc 26098
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.109.166 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+/bin/sh: /home/users/mjones07/userbased-bench/readfile_nc: No such file or directory
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    output = subprocess.check_output(cwd+'/readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command '/home/users/mjones07/userbased-bench/readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc 1000000 s' returned non-zero exit status 127
+/bin/sh: /home/users/mjones07/userbased-bench/readfile_nc: No such file or directory
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    output = subprocess.check_output(cwd+'/readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command '/home/users/mjones07/userbased-bench/readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc 1000000 s' returned non-zero exit status 127
+/bin/sh: /home/users/mjones07/userbased-bench/readfile_nc: No such file or directory
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    output = subprocess.check_output(cwd+'/readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command '/home/users/mjones07/userbased-bench/readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc 1000000 s' returned non-zero exit status 127
+/bin/sh: /home/users/mjones07/userbased-bench/readfile_nc: No such file or directory
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 86, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    output = subprocess.check_output(cwd+'/readfile_nc %s %s %s' % (fid+'.nc', setup['buffersize'], setup['readpattern']),shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command '/home/users/mjones07/userbased-bench/readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc 1000000 s' returned non-zero exit status 127
+Sender: LSF System <lsfadmin@host330.jc.rl.ac.uk>
+Subject: Job 7392881: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Oct 12 14:41:30 2017.
+Job was executed on host(s) <4*host330.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Thu Oct 12 15:34:57 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Oct 12 15:34:57 2017.
+Terminated at Sat Oct 14 00:01:00 2017.
+Results reported at Thu Oct 12 16:34:14 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+#BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   3045.35 sec.
+    Max Memory :                                 87.06 MB
+    Average Memory :                             84.78 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   3962 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   3557 sec.
+    Turnaround time :                            6764 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 57176
+  daemon proc 57179 on host 192.168.118.30
+    rank 0:  proc 57183
+    rank 1:  proc 57184
+    rank 2:  proc 57185
+    rank 3:  proc 57186
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.118.30 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+('read,', '2,256000000,256000000,1000000,256,sequential,0.120000,0.947437,270.202663')
+('read,', '1,256000000,256000000,1000000,256,sequential,0.060000,0.062424,4100.986800')
+('read,', '3,256000000,256000000,1000000,256,sequential,0.130000,0.132176,1936.811524')
+('read,', '0,256000000,256000000,1000000,256,sequential,0.130000,0.128084,1998.688361')
+Sender: LSF System <lsfadmin@host314.jc.rl.ac.uk>
+Subject: Job 7731544: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Oct 12 16:59:26 2017.
+Job was executed on host(s) <4*host314.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Thu Oct 12 16:59:27 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Oct 12 16:59:27 2017.
+Terminated at Sat Oct 14 00:01:00 2017.
+Results reported at Thu Oct 12 17:58:05 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+#BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   3062.95 sec.
+    Max Memory :                                 85.00 MB
+    Average Memory :                             79.33 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   3968 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   3518 sec.
+    Turnaround time :                            3519 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 135979
+  daemon proc 135982 on host 192.168.117.114
+    rank 0:  proc 135986
+    rank 1:  proc 135987
+    rank 2:  proc 135988
+    rank 3:  proc 135989
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.117.114 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc
+read,2,256000000,256000000,1000000.0,256.0,sequential,0.2,1.02851700783,248.902058062
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc
+read,0,256000000,256000000,1000000.0,256.0,sequential,0.15,0.147140979767,1739.82802348
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc
+read,1,256000000,256000000,1000000.0,256.0,sequential,0.14,0.137027025223,1868.24460054
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test.nc
+read,3,256000000,256000000,1000000.0,256.0,sequential,0.13,0.129899024963,1970.7615209
+Sender: LSF System <lsfadmin@host314.jc.rl.ac.uk>
+Subject: Job 558798: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Oct 13 15:24:02 2017.
+Job was executed on host(s) <4*host314.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct 13 15:24:02 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct 13 15:24:02 2017.
+Terminated at Sat Oct 14 00:01:00 2017.
+Results reported at Fri Oct 13 15:24:21 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+#BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   32.88 sec.
+    Max Memory :                                 21.07 MB
+    Average Memory :                             21.07 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   846 MB
+    Max Processes :                              10
+    Max Threads :                                11
+    Run time :                                   19 sec.
+    Turnaround time :                            19 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 169226
+  daemon proc 169229 on host 192.168.117.114
+    rank 0:  proc 169233
+    rank 1:  proc 169234
+    rank 2:  proc 169235
+    rank 3:  proc 169236
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.117.114 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 27, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+Sender: LSF System <lsfadmin@host302.jc.rl.ac.uk>
+Subject: Job 586040: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Oct 13 15:37:03 2017.
+Job was executed on host(s) <4*host302.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct 13 15:37:04 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct 13 15:37:04 2017.
+Terminated at Sat Oct 14 00:01:00 2017.
+Results reported at Fri Oct 13 15:37:11 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+#BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   5.28 sec.
+    Max Memory :                                 19.07 MB
+    Average Memory :                             19.07 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2977 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   7 sec.
+    Turnaround time :                            8 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 94413
+  daemon proc 94416 on host 192.168.117.102
+    rank 0:  proc 94420
+    rank 1:  proc 94421
+    rank 2:  proc 94422
+    rank 3:  proc 94423
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.117.102 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 71, in main
+    results = 'read,'+readfile(rank, fid+rank+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+TypeError: cannot concatenate 'str' and 'int' objects
+Sender: LSF System <lsfadmin@host314.jc.rl.ac.uk>
+Subject: Job 588523: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Oct 13 15:38:05 2017.
+Job was executed on host(s) <4*host314.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct 13 15:38:06 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct 13 15:38:06 2017.
+Terminated at Sat Oct 14 00:01:00 2017.
+Results reported at Fri Oct 13 15:38:11 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+#BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   5.28 sec.
+    Max Memory :                                 24.56 MB
+    Average Memory :                             24.56 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2982 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   5 sec.
+    Turnaround time :                            6 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 169828
+  daemon proc 169831 on host 192.168.117.114
+    rank 0:  proc 169835
+    rank 1:  proc 169836
+    rank 2:  proc 169837
+    rank 3:  proc 169838
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.117.114 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 30, in create_files
+    print 'mpi rank %s creating file %s' % (mpirank, path+fname+str(mpirank)+'.nc')
+NameError: global name 'path' is not defined
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+read,0,256000000,256000000,1000000.0,256.0,sequential,0.15,0.144471883774,1771.97108055
+Sender: LSF System <lsfadmin@host330.jc.rl.ac.uk>
+Subject: Job 590467: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Oct 13 15:38:49 2017.
+Job was executed on host(s) <4*host330.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct 13 15:38:51 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct 13 15:38:51 2017.
+Terminated at Sat Oct 14 00:01:00 2017.
+Results reported at Fri Oct 13 15:38:57 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+#BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5.84 sec.
+    Max Memory :                                 1.61 MB
+    Average Memory :                             1.61 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   37 MB
+    Max Processes :                              1
+    Max Threads :                                1
+    Run time :                                   7 sec.
+    Turnaround time :                            8 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 92531
+  daemon proc 92534 on host 192.168.118.30
+    rank 0:  proc 92538
+    rank 1:  proc 92539
+    rank 2:  proc 92540
+    rank 3:  proc 92541
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.118.30 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+read,3,256000000,256000000,1000000.0,256.0,sequential,0.17,0.17446398735,1467.35153706
+read,0,256000000,256000000,1000000.0,256.0,sequential,0.1,0.102979898453,2485.92204737
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+read,1,256000000,256000000,1000000.0,256.0,sequential,0.13,0.139629125595,1833.42836897
+read,2,256000000,256000000,1000000.0,256.0,sequential,0.14,0.147356987,1737.27764942
+Sender: LSF System <lsfadmin@host330.jc.rl.ac.uk>
+Subject: Job 591882: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;#BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Oct 13 15:39:18 2017.
+Job was executed on host(s) <4*host330.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct 13 15:39:18 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct 13 15:39:18 2017.
+Terminated at Sat Oct 14 00:01:00 2017.
+Results reported at Fri Oct 13 16:57:38 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+#BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5802.17 sec.
+    Max Memory :                                 89.20 MB
+    Average Memory :                             86.02 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   3970 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   4700 sec.
+    Turnaround time :                            4700 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 92600
+  daemon proc 92603 on host 192.168.118.30
+    rank 0:  proc 92607
+    rank 1:  proc 92608
+    rank 2:  proc 92609
+    rank 3:  proc 92610
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.118.30 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+read,3,256000000000,256000000000,1000000.0,256000.0,sequential,100.91,100.846169949,2538.51980824
+read,1,256000000000,256000000000,1000000.0,256000.0,sequential,107.11,107.039277077,2391.64545008
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+read,0,256000000000,256000000000,1000000.0,256000.0,sequential,195.62,1046.59765291,244.602115519
+read,2,256000000000,256000000000,1000000.0,256000.0,sequential,194.85,1027.567981,249.131935534
+Sender: LSF System <lsfadmin@host308.jc.rl.ac.uk>
+Subject: Job 2307899: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 16 15:24:38 2017.
+Job was executed on host(s) <4*host308.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 16 15:24:42 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 16 15:24:42 2017.
+Terminated at Mon Oct 16 15:24:58 2017.
+Results reported at Mon Oct 16 15:24:58 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   7.19 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   16 sec.
+    Turnaround time :                            20 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 14151
+  daemon proc 14154 on host 192.168.117.108
+    rank 0:  proc 14158
+    rank 1:  proc 14159
+    rank 2:  proc 14160
+    rank 3:  proc 14161
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.117.108 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 71, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 81, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 10, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "netCDF4/_netCDF4.pyx", line 1875, in netCDF4._netCDF4.Dataset.__init__ (netCDF4/_netCDF4.c:13376)
+  File "netCDF4/_netCDF4.pyx", line 1581, in netCDF4._netCDF4._ensure_nc_success (netCDF4/_netCDF4.c:12162)
+IOError: NetCDF: HDF error
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+read,0,256000000,256000000,1000000.0,256.0,sequential,0.15,0.154597997665,1655.90760466
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+read,3,256000000,256000000,1000000.0,256.0,sequential,0.15,0.141211986542,1812.87726538
+read,2,256000000,256000000,1000000.0,256.0,sequential,0.12,0.126971960068,2016.19318047
+Sender: LSF System <lsfadmin@host308.jc.rl.ac.uk>
+Subject: Job 2307988: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 16 15:26:50 2017.
+Job was executed on host(s) <4*host308.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 16 15:26:53 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 16 15:26:53 2017.
+Terminated at Mon Oct 16 15:26:54 2017.
+Results reported at Mon Oct 16 15:26:54 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2.79 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            4 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 14530
+  daemon proc 14533 on host 192.168.117.108
+    rank 0:  proc 14537
+    rank 1:  proc 14538
+    rank 2:  proc 14539
+    rank 3:  proc 14540
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.117.108 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+read,1,256000000,256000000,1000000.0,256.0,sequential,0.14,0.13311290741,1923.17938945
+read,0,256000000,256000000,1000000.0,256.0,sequential,0.16,0.150632858276,1699.49639759
+read,3,256000000,256000000,1000000.0,256.0,sequential,0.16,0.155076026917,1650.80319048
+read,2,256000000,256000000,1000000.0,256.0,sequential,0.15,0.155257940292,1648.86896939
+Sender: LSF System <lsfadmin@host308.jc.rl.ac.uk>
+Subject: Job 2308093: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 16 15:28:48 2017.
+Job was executed on host(s) <4*host308.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 16 15:28:53 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 16 15:28:53 2017.
+Terminated at Mon Oct 16 15:28:55 2017.
+Results reported at Mon Oct 16 15:28:55 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2.82 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            7 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 14816
+  daemon proc 14819 on host 192.168.117.108
+    rank 0:  proc 14823
+    rank 1:  proc 14824
+    rank 2:  proc 14825
+    rank 3:  proc 14826
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.117.108 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+read,2,256000000,256000000,1000000.0,256.0,sequential,0.14,0.145488023758,1759.59500574
+read,0,256000000,256000000,1000000.0,256.0,sequential,0.16,0.159217119217,1607.86730258
+read,1,256000000,256000000,1000000.0,256.0,sequential,0.16,0.160040140152,1599.59869916
+read,3,256000000,256000000,1000000.0,256.0,sequential,0.15,0.160096883774,1599.03174856
+Sender: LSF System <lsfadmin@host331.jc.rl.ac.uk>
+Subject: Job 2308133: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 16 15:29:44 2017.
+Job was executed on host(s) <4*host331.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 16 15:29:51 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 16 15:29:51 2017.
+Terminated at Mon Oct 16 15:29:57 2017.
+Results reported at Mon Oct 16 15:29:57 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   6.44 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   6 sec.
+    Turnaround time :                            13 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 14175
+  daemon proc 14178 on host 192.168.118.31
+    rank 0:  proc 14182
+    rank 1:  proc 14183
+    rank 2:  proc 14184
+    rank 3:  proc 14185
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.118.31 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+read,2,256000000,256000000,1000000.0,256.0,sequential,0.14,0.133443832397,1918.41013107
+read,1,256000000,256000000,1000000.0,256.0,sequential,0.14,0.141361951828,1810.95405581
+read,3,256000000,256000000,1000000.0,256.0,sequential,0.13,0.133501052856,1917.58787307
+read,0,256000000,256000000,1000000.0,256.0,sequential,0.15,0.146539211273,1746.97268926
+Sender: LSF System <lsfadmin@host099.jc.rl.ac.uk>
+Subject: Job 2597736: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Wed Oct 18 10:55:36 2017.
+Job was executed on host(s) <4*host099.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Wed Oct 18 14:56:09 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Wed Oct 18 14:56:09 2017.
+Terminated at Wed Oct 18 14:56:32 2017.
+Results reported at Wed Oct 18 14:56:32 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 245.
+
+Resource usage summary:
+
+    CPU time :                                   5.68 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   23 sec.
+    Turnaround time :                            14456 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 9855
+  daemon proc 9858 on host 192.168.106.99
+    rank 0:  proc 9862
+    rank 1:  proc 9863
+    rank 2:  proc 9864
+    rank 3:  proc 9865
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.106.99 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 26, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Sender: LSF System <lsfadmin@host170.jc.rl.ac.uk>
+Subject: Job 2668530: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Wed Oct 18 15:16:40 2017.
+Job was executed on host(s) <4*host170.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Wed Oct 18 15:16:40 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Wed Oct 18 15:16:40 2017.
+Terminated at Wed Oct 18 17:06:49 2017.
+Results reported at Wed Oct 18 17:06:49 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5629.30 sec.
+    Max Memory :                                 87.02 MB
+    Average Memory :                             79.68 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   3946 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   6609 sec.
+    Turnaround time :                            6609 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 32172
+  daemon proc 32175 on host 192.168.110.170
+    rank 0:  proc 32179
+    rank 1:  proc 32180
+    rank 2:  proc 32181
+    rank 3:  proc 32182
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.110.170 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+read,1,256000000000,256000000000,1000000.0,256000.0,sequential,295.75,2250.3859489,113.758264499
+read,0,256000000000,256000000000,1000000.0,256000.0,sequential,294.26,2323.085114,110.198286949
+read,3,256000000000,256000000000,1000000.0,256000.0,sequential,295.1,2375.28225017,107.776665271
+read,2,256000000000,256000000000,1000000.0,256000.0,sequential,295.23,2444.61324883,104.720041145
+Sender: LSF System <lsfadmin@host126.jc.rl.ac.uk>
+Subject: Job 3283725: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Oct 19 15:07:44 2017.
+Job was executed on host(s) <4*host126.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Thu Oct 19 15:07:45 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Oct 19 15:07:45 2017.
+Terminated at Thu Oct 19 15:07:47 2017.
+Results reported at Thu Oct 19 15:07:47 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2.29 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 26134
+  daemon proc 26137 on host 192.168.107.126
+    rank 0:  proc 26141
+    rank 1:  proc 26142
+    rank 2:  proc 26143
+    rank 3:  proc 26144
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.107.126 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 101, in <module>
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 101, in <module>
+    main()
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 101, in <module>
+    main()
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 101, in <module>
+    if not check_files(setup, mpisize):
+    main()
+TypeError: check_files() takes exactly 3 arguments (2 given)
+    if not check_files(setup, mpisize):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    main()
+TypeError: check_files() takes exactly 3 arguments (2 given)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 76, in main
+    if not check_files(setup, mpisize):
+TypeError: check_files() takes exactly 3 arguments (2 given)
+    if not check_files(setup, mpisize):
+TypeError: check_files() takes exactly 3 arguments (2 given)
+Sender: LSF System <lsfadmin@host256.jc.rl.ac.uk>
+Subject: Job 3283733: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Oct 19 15:10:28 2017.
+Job was executed on host(s) <4*host256.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Thu Oct 19 15:10:29 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Oct 19 15:10:29 2017.
+Terminated at Thu Oct 19 16:31:09 2017.
+Results reported at Thu Oct 19 16:31:09 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   4297.30 sec.
+    Max Memory :                                 91.12 MB
+    Average Memory :                             77.97 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   4477 MB
+    Max Processes :                              15
+    Max Threads :                                17
+    Run time :                                   4840 sec.
+    Turnaround time :                            4843 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.114.156 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Process layout for world 0 is as follows:
+mpirun:  proc 11302
+  daemon proc 11305 on host 192.168.114.156
+    rank 0:  proc 11309
+    rank 1:  proc 11310
+    rank 2:  proc 11311
+    rank 3:  proc 11312
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 102, in <module>
+    comm.barrier()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 92, in main
+    setup = get_setup(setup_config_file)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command '/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc 1000000 s' returned non-zero exit status -7
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 102, in <module>
+    comm.barrier()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 92, in main
+    setup = get_setup(setup_config_file)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command '/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc 1000000 s' returned non-zero exit status -7
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 102, in <module>
+    comm.barrier()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 92, in main
+    setup = get_setup(setup_config_file)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command '/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc 1000000 s' returned non-zero exit status -7
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 102, in <module>
+    comm.barrier()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 92, in main
+    setup = get_setup(setup_config_file)
+  File "/usr/lib/python2.7/subprocess.py", line 544, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+subprocess.CalledProcessError: Command '/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc 1000000 s' returned non-zero exit status -7
+Sender: LSF System <lsfadmin@host097.jc.rl.ac.uk>
+Subject: Job 4983249: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/cjroberts/ior_run/run_ior.sh -f /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/cjroberts/ior_run/run_ior.sh -f /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:43:39 2017.
+Job was executed on host(s) <host097.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:43:40 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:43:40 2017.
+Terminated at Thu Nov  2 11:43:47 2017.
+Results reported at Thu Nov  2 11:43:47 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/cjroberts/ior_run/run_ior.sh -f /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 245.
+
+Resource usage summary:
+
+    CPU time :                                   0.19 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   7 sec.
+    Turnaround time :                            8 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 3229
+  daemon proc 3232 on host 192.168.103.97
+    rank 0:  proc 3236
+Host 0 -- ip 192.168.103.97 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+IOR-3.1.0: MPI Coordinated Test of Parallel I/O
+
+non-option argument: /homes/users/mjones07/userbased-bench/configpync
+Began: Thu Nov  2 11:43:41 2017
+Command line used: /home/users/cjroberts/ior/bin/ior -f /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync
+Machine: Linux host097.jc.rl.ac.uk
+
+Test 0 started: Thu Nov  2 11:43:41 2017
+Summary:
+	api                = HDF5-1.8.12 (Serial)
+	test filename      = testFile
+	access             = single-shared-file
+	ordering in a file = sequential offsets
+	ordering inter file= no tasks offsets
+	clients            = 1 (1 per node)
+	repetitions        = 1
+	xfersize           = 262144 bytes
+	blocksize          = 1 MiB
+	aggregate filesize = 1 MiB
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+MPI Application rank 0 killed before MPI_Finalize() with signal 11
+Sender: LSF System <lsfadmin@host282.jc.rl.ac.uk>
+Subject: Job 4983613: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:44:55 2017.
+Job was executed on host(s) <host282.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:44:56 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:44:56 2017.
+Terminated at Thu Nov  2 11:44:56 2017.
+Results reported at Thu Nov  2 11:44:56 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.11 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   0 sec.
+    Turnaround time :                            1 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 174
+    if dim='1d':
+          ^
+SyntaxError: invalid syntax
+MPI Application rank 0 exited before MPI_Init() with status 1
+mpirun: Broken pipe
+mpirun: propagating signal 13
+Sender: LSF System <lsfadmin@host278.jc.rl.ac.uk>
+Subject: Job 4983718: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:45:22 2017.
+Job was executed on host(s) <host278.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:45:23 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:45:23 2017.
+Terminated at Thu Nov  2 11:45:24 2017.
+Results reported at Thu Nov  2 11:45:24 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /homes/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.28 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 25087
+  daemon proc 25090 on host 192.168.120.178
+    rank 0:  proc 25094
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.120.178 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 215, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 116, in main
+    setup = get_setup(setup_config_file)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 97, in get_setup
+    for line in open(setup_config_file):
+IOError: [Errno 2] No such file or directory: '/homes/users/mjones07/userbased-bench/configpync'
+Sender: LSF System <lsfadmin@host155.jc.rl.ac.uk>
+Subject: Job 4984031: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:46:57 2017.
+Job was executed on host(s) <host155.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:46:58 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:46:58 2017.
+Terminated at Thu Nov  2 11:47:00 2017.
+Results reported at Thu Nov  2 11:47:00 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.27 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 26864
+  daemon proc 26867 on host 192.168.109.155
+    rank 0:  proc 26871
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.109.155 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 215, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 117, in main
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+Sender: LSF System <lsfadmin@host150.jc.rl.ac.uk>
+Subject: Job 4984303: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:47:42 2017.
+Job was executed on host(s) <host150.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:47:43 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:47:43 2017.
+Terminated at Thu Nov  2 11:47:44 2017.
+Results reported at Thu Nov  2 11:47:44 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.27 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 31072
+  daemon proc 31075 on host 192.168.109.150
+    rank 0:  proc 31079
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.109.150 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 215, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 119, in main
+    if setup['objsize'] == 0:
+KeyError: 'objsize'
+Sender: LSF System <lsfadmin@host242.jc.rl.ac.uk>
+Subject: Job 4984451: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:48:07 2017.
+Job was executed on host(s) <host242.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:48:08 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:48:08 2017.
+Terminated at Thu Nov  2 11:48:09 2017.
+Results reported at Thu Nov  2 11:48:09 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.28 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 17760
+  daemon proc 17763 on host 192.168.115.242
+    rank 0:  proc 17767
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.115.242 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 215, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 120, in main
+    setup['objsize']=sys.argv[2]
+IndexError: list index out of range
+Sender: LSF System <lsfadmin@host191.jc.rl.ac.uk>
+Subject: Job 4984539: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:48:26 2017.
+Job was executed on host(s) <host191.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:48:26 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:48:26 2017.
+Terminated at Thu Nov  2 11:48:28 2017.
+Results reported at Thu Nov  2 11:48:28 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.28 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 7088
+  daemon proc 7091 on host 192.168.110.191
+    rank 0:  proc 7095
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.110.191 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 6291456L}
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 215, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 151, in main
+    if setup['language'] == 'Python' and setup['filetype'] == 'nc' and setup['stor'] == 's3':
+KeyError: 'stor'
+Sender: LSF System <lsfadmin@host094.jc.rl.ac.uk>
+Subject: Job 4984637: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:48:43 2017.
+Job was executed on host(s) <host094.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:48:43 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:48:43 2017.
+Terminated at Thu Nov  2 11:48:44 2017.
+Results reported at Thu Nov  2 11:48:44 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.27 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            1 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 31829
+  daemon proc 31832 on host 192.168.103.94
+    rank 0:  proc 31836
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.103.94 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 6291456L}
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 215, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 159, in main
+    if dim=='1d':
+NameError: global name 'dim' is not defined
+Sender: LSF System <lsfadmin@host164.jc.rl.ac.uk>
+Subject: Job 4984815: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:49:27 2017.
+Job was executed on host(s) <host164.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:49:28 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:49:28 2017.
+Terminated at Thu Nov  2 11:49:29 2017.
+Results reported at Thu Nov  2 11:49:29 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.29 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            2 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 2416
+  daemon proc 2419 on host 192.168.109.164
+    rank 0:  proc 2423
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.109.164 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 6291456L}
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 215, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 165, in main
+    mpirank, fid, pattern, buffersize, v, rand_num
+NameError: global name 'mpirank' is not defined
+Sender: LSF System <lsfadmin@host285.jc.rl.ac.uk>
+Subject: Job 4984917: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 11:49:52 2017.
+Job was executed on host(s) <host285.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 11:49:53 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 11:49:53 2017.
+Terminated at Thu Nov  2 12:06:52 2017.
+Results reported at Thu Nov  2 12:06:52 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   259.89 sec.
+    Max Memory :                                 52.75 MB
+    Average Memory :                             49.99 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2488 MB
+    Max Processes :                              8
+    Max Threads :                                10
+    Run time :                                   1019 sec.
+    Turnaround time :                            1020 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 24744
+  daemon proc 24747 on host 192.168.120.185
+    rank 0:  proc 24751
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.120.185 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 6291456L}
+Filling by iterating over dims 1,2 with 180*240 buffers of size 1x768x1024 elements, and a remainder of 0x768x1024 elements
+Bytes read = 259200
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 213, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 166, in main
+    results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+TypeError: cannot concatenate 'str' and 'NoneType' objects
+Sender: LSF System <lsfadmin@host068.jc.rl.ac.uk>
+Subject: Job 4988978: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 12:06:55 2017.
+Job was executed on host(s) <host068.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 12:06:56 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 12:06:56 2017.
+Terminated at Thu Nov  2 12:06:58 2017.
+Results reported at Thu Nov  2 12:06:58 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.29 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   2 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 20387
+  daemon proc 20390 on host 192.168.102.68
+    rank 0:  proc 20394
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.102.68 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxt_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 3932160L}
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 213, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 166, in main
+    results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 106, in readfile_4d
+    assert (dim4*dim3)%(buffersize/8.) == 0, ValueError('Buffersize must be whole fraction of dimensions 3 and 4')
+AssertionError: Buffersize must be whole fraction of dimensions 3 and 4
+Sender: LSF System <lsfadmin@host094.jc.rl.ac.uk>
+Subject: Job 4989704: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 12:09:46 2017.
+Job was executed on host(s) <host094.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 12:09:47 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 12:09:47 2017.
+Terminated at Thu Nov  2 12:31:39 2017.
+Results reported at Thu Nov  2 12:31:39 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   344.90 sec.
+    Max Memory :                                 53.39 MB
+    Average Memory :                             51.82 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2488 MB
+    Max Processes :                              8
+    Max Threads :                                10
+    Run time :                                   1312 sec.
+    Turnaround time :                            1313 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 1092
+  daemon proc 1095 on host 192.168.103.94
+    rank 0:  proc 1099
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.103.94 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 'h', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxt_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 3932160L}
+Filling by iterating over dims 2,3 with 384*180 buffers of size 2x240x1024 elements, and a remainder of 0x240x1024 elements
+Bytes read = 259200
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 213, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 166, in main
+    results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 245, in readfile_4d
+    rate = bytes_read/wall_time
+NameError: global name 'bytes_read' is not defined

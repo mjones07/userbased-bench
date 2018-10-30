@@ -1,0 +1,731 @@
+Sender: LSF System <lsfadmin@host162.jc.rl.ac.uk>
+Subject: Job 4649374: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 17:02:07 2017.
+Job was executed on host(s) <host162.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 30 17:02:08 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 30 17:02:08 2017.
+Terminated at Mon Oct 30 17:02:42 2017.
+Results reported at Mon Oct 30 17:02:42 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.29 sec.
+    Max Memory :                                 29.06 MB
+    Average Memory :                             29.06 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   33610 MB
+    Max Processes :                              9
+    Max Threads :                                26
+    Run time :                                   34 sec.
+    Turnaround time :                            35 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 29285
+  daemon proc 29288 on host 192.168.109.162
+    rank 0:  proc 29313
+Host 0 -- ip 192.168.109.162 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/objvar.csv', 'stor': 's3', 'mpiio': 0L, 'objsize': '1000000', 'cleanup': 0L, 'filesize': 400000000L, 'fname': 'test_S3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/test_S30.nc
+85
+WARNING: Currently does not use buffer size in creation
+<class 'S3netCDF4._s3netCDF4.s3Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    Conventions: CFA-0.4
+    dimensions(sizes): dim1(85), dim2(85), dim3(85), dim4(85)
+    variables(dimensions): int32 [4mdim1[0m(dim1), int32 [4mdim2[0m(dim2), int32 [4mdim3[0m(dim3), int32 [4mdim4[0m(dim4), float64 [4mvar[0m()
+    groups: 
+
+s3://s3testqwer/s3testqwer1/test_S30.nca
+()
+WARNING: Does not currently use buffer size or read pattern
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 153, in main
+    results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 88, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 20, in seq_read_1d
+    bytes_read = 8*var.shape[0]*var.shape[1]*var.shape[2]*var.shape[3]
+IndexError: tuple index out of range
+Sender: LSF System <lsfadmin@host148.jc.rl.ac.uk>
+Subject: Job 4650713: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 17:10:35 2017.
+Job was executed on host(s) <host148.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 30 17:10:35 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 30 17:10:35 2017.
+Terminated at Mon Oct 30 17:11:12 2017.
+Results reported at Mon Oct 30 17:11:12 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.38 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   37 sec.
+    Turnaround time :                            37 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 12012
+  daemon proc 12015 on host 192.168.109.148
+    rank 0:  proc 12040
+Host 0 -- ip 192.168.109.148 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/objvar.csv', 'stor': 's3', 'mpiio': 0L, 'objsize': '1000000', 'cleanup': 0L, 'filesize': 400000000L, 'fname': 'test_S3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/test_S30.nc
+85
+<type 'netCDF4._netCDF4.Variable'>
+float64 var(dim1, dim2, dim3, dim4)
+unlimited dimensions: 
+current shape = (85, 85, 85, 85)
+filling on, default _FillValue of 9.96920996839e+36 used
+
+WARNING: Currently does not use buffer size in creation
+<class 'S3netCDF4._s3netCDF4.s3Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    Conventions: CFA-0.4
+    dimensions(sizes): dim1(85), dim2(85), dim3(85), dim4(85)
+    variables(dimensions): int32 [4mdim1[0m(dim1), int32 [4mdim2[0m(dim2), int32 [4mdim3[0m(dim3), int32 [4mdim4[0m(dim4), float64 [4mvar[0m()
+    groups: 
+
+s3://s3testqwer/s3testqwer1/test_S30.nca
+()
+WARNING: Does not currently use buffer size or read pattern
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 153, in main
+    results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 88, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 20, in seq_read_1d
+    bytes_read = 8*var.shape[0]*var.shape[1]*var.shape[2]*var.shape[3]
+IndexError: tuple index out of range
+Sender: LSF System <lsfadmin@host192.jc.rl.ac.uk>
+Subject: Job 4651959: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 17:13:53 2017.
+Job was executed on host(s) <host192.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 30 17:13:54 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 30 17:13:54 2017.
+Terminated at Mon Oct 30 17:14:26 2017.
+Results reported at Mon Oct 30 17:14:26 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.82 sec.
+    Max Memory :                                 49.50 MB
+    Average Memory :                             49.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2944 MB
+    Max Processes :                              9
+    Max Threads :                                11
+    Run time :                                   32 sec.
+    Turnaround time :                            33 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 31948
+  daemon proc 31951 on host 192.168.110.192
+    rank 0:  proc 31979
+Host 0 -- ip 192.168.110.192 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/objvar.csv', 'stor': 's3', 'mpiio': 0L, 'objsize': '1000000', 'cleanup': 0L, 'filesize': 400000000L, 'fname': 'test_S3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/test_S30.nc
+85
+<type 'netCDF4._netCDF4.Variable'>
+float64 var(dim1, dim2, dim3, dim4)
+unlimited dimensions: 
+current shape = (85, 85, 85, 85)
+filling on, default _FillValue of 9.96920996839e+36 used
+
+WARNING: Currently does not use buffer size in creation
+0.105289865095
+<class 'S3netCDF4._s3netCDF4.s3Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    Conventions: CFA-0.4
+    dimensions(sizes): dim1(85), dim2(85), dim3(85), dim4(85)
+    variables(dimensions): int32 [4mdim1[0m(dim1), int32 [4mdim2[0m(dim2), int32 [4mdim3[0m(dim3), int32 [4mdim4[0m(dim4), float64 [4mvar[0m()
+    groups: 
+
+s3://s3testqwer/s3testqwer1/test_S30.nca
+()
+WARNING: Does not currently use buffer size or read pattern
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 153, in main
+    results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 88, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 20, in seq_read_1d
+    bytes_read = 8*var.shape[0]*var.shape[1]*var.shape[2]*var.shape[3]
+IndexError: tuple index out of range
+Sender: LSF System <lsfadmin@host056.jc.rl.ac.uk>
+Subject: Job 4651960: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 17:16:07 2017.
+Job was executed on host(s) <host056.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 30 17:16:08 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 30 17:16:08 2017.
+Terminated at Mon Oct 30 17:16:42 2017.
+Results reported at Mon Oct 30 17:16:42 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.48 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   34 sec.
+    Turnaround time :                            35 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 4162
+  daemon proc 4165 on host 192.168.102.56
+    rank 0:  proc 4190
+Host 0 -- ip 192.168.102.56 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/objvar.csv', 'stor': 's3', 'mpiio': 0L, 'objsize': '1000000', 'cleanup': 0L, 'filesize': 400000000L, 'fname': 'test_S3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/test_S30.nc
+85
+<type 'netCDF4._netCDF4.Variable'>
+float64 var(dim1, dim2, dim3, dim4)
+unlimited dimensions: 
+current shape = (85, 85, 85, 85)
+filling on, default _FillValue of 9.96920996839e+36 used
+
+WARNING: Currently does not use buffer size in creation
+0.371036591996
+<class 'S3netCDF4._s3netCDF4.s3Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    Conventions: CFA-0.4
+    dimensions(sizes): dim1(85), dim2(85), dim3(85), dim4(85)
+    variables(dimensions): int32 [4mdim1[0m(dim1), int32 [4mdim2[0m(dim2), int32 [4mdim3[0m(dim3), int32 [4mdim4[0m(dim4), float64 [4mvar[0m()
+    groups: 
+
+s3://s3testqwer/s3testqwer1/test_S30.nca
+()
+WARNING: Does not currently use buffer size or read pattern
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 153, in main
+    results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 88, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 20, in seq_read_1d
+    bytes_read = 8*var.shape[0]*var.shape[1]*var.shape[2]*var.shape[3]
+IndexError: tuple index out of range
+Sender: LSF System <lsfadmin@host056.jc.rl.ac.uk>
+Subject: Job 4651962: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 17:18:28 2017.
+Job was executed on host(s) <host056.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 30 17:18:28 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 30 17:18:28 2017.
+Terminated at Mon Oct 30 17:18:58 2017.
+Results reported at Mon Oct 30 17:18:58 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   9.45 sec.
+    Max Memory :                                 52.16 MB
+    Average Memory :                             52.16 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2944 MB
+    Max Processes :                              9
+    Max Threads :                                11
+    Run time :                                   30 sec.
+    Turnaround time :                            30 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 4393
+  daemon proc 4396 on host 192.168.102.56
+    rank 0:  proc 4421
+Host 0 -- ip 192.168.102.56 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/objvar.csv', 'stor': 's3', 'mpiio': 0L, 'objsize': '1000000', 'cleanup': 0L, 'filesize': 400000000L, 'fname': 'test_S3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/test_S30.nc
+85
+<type 'netCDF4._netCDF4.Variable'>
+float64 var(dim1, dim2, dim3, dim4)
+unlimited dimensions: 
+current shape = (85, 85, 85, 85)
+filling on, default _FillValue of 9.96920996839e+36 used
+
+WARNING: Currently does not use buffer size in creation
+0.951052674369
+<class 'S3netCDF4._s3netCDF4.s3Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    Conventions: CFA-0.4
+    dimensions(sizes): dim1(85), dim2(85), dim3(85), dim4(85)
+    variables(dimensions): int32 [4mdim1[0m(dim1), int32 [4mdim2[0m(dim2), int32 [4mdim3[0m(dim3), int32 [4mdim4[0m(dim4), float64 [4mvar[0m()
+    groups: 
+
+s3://s3testqwer/s3testqwer1/test_S30.nca
+()
+()
+WARNING: Does not currently use buffer size or read pattern
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 153, in main
+    results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 90, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 22, in seq_read_1d
+    bytes_read = 8*var.shape[0]*var.shape[1]*var.shape[2]*var.shape[3]
+IndexError: tuple index out of range
+Sender: LSF System <lsfadmin@host276.jc.rl.ac.uk>
+Subject: Job 4651963: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 17:20:25 2017.
+Job was executed on host(s) <host276.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 30 17:20:25 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 30 17:20:25 2017.
+Terminated at Mon Oct 30 17:21:22 2017.
+Results reported at Mon Oct 30 17:21:22 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 1000000
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   16.77 sec.
+    Max Memory :                                 50.75 MB
+    Average Memory :                             50.75 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2944 MB
+    Max Processes :                              9
+    Max Threads :                                11
+    Run time :                                   57 sec.
+    Turnaround time :                            57 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 12060
+  daemon proc 12063 on host 192.168.113.176
+    rank 0:  proc 12086
+Host 0 -- ip 192.168.113.176 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/objvar.csv', 'stor': 's3', 'mpiio': 0L, 'objsize': '1000000', 'cleanup': 0L, 'filesize': 400000000L, 'fname': 'test_S3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/test_S30.nc
+85
+<type 'netCDF4._netCDF4.Variable'>
+float64 var(dim1, dim2, dim3, dim4)
+unlimited dimensions: 
+current shape = (85, 85, 85, 85)
+filling on, default _FillValue of 9.96920996839e+36 used
+
+WARNING: Currently does not use buffer size in creation
+0.120717671454
+<class 'S3netCDF4._s3netCDF4.s3Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    Conventions: CFA-0.4
+    dimensions(sizes): dim1(85), dim2(85), dim3(85), dim4(85)
+    variables(dimensions): int32 [4mdim1[0m(dim1), int32 [4mdim2[0m(dim2), int32 [4mdim3[0m(dim3), int32 [4mdim4[0m(dim4), float64 [4mvar[0m()
+    groups: 
+
+s3://s3testqwer/s3testqwer1/test_S30.nca
+()
+()
+WARNING: Does not currently use buffer size or read pattern
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 153, in main
+    results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 90, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 22, in seq_read_1d
+    bytes_read = 8*var.shape[0]*var.shape[1]*var.shape[2]*var.shape[3]
+IndexError: tuple index out of range
+Sender: LSF System <lsfadmin@host178.jc.rl.ac.uk>
+Subject: Job 4652563: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 100000000> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 100000000> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 17:24:19 2017.
+Job was executed on host(s) <host178.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 30 17:24:20 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 30 17:24:20 2017.
+Terminated at Mon Oct 30 17:25:04 2017.
+Results reported at Mon Oct 30 17:25:04 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 100000000
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   15.68 sec.
+    Max Memory :                                 126.11 MB
+    Average Memory :                             126.11 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   9355 MB
+    Max Processes :                              9
+    Max Threads :                                14
+    Run time :                                   44 sec.
+    Turnaround time :                            45 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 15498
+  daemon proc 15501 on host 192.168.110.178
+    rank 0:  proc 15526
+Host 0 -- ip 192.168.110.178 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/objvar.csv', 'stor': 's3', 'mpiio': 0L, 'objsize': '100000000', 'cleanup': 0L, 'filesize': 400000000L, 'fname': 'test_S3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/test_S30.nc
+85
+<type 'netCDF4._netCDF4.Variable'>
+float64 var(dim1, dim2, dim3, dim4)
+unlimited dimensions: 
+current shape = (85, 85, 85, 85)
+filling on, default _FillValue of 9.96920996839e+36 used
+
+WARNING: Currently does not use buffer size in creation
+0.37523907465
+<class 'S3netCDF4._s3netCDF4.s3Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    Conventions: CFA-0.4
+    dimensions(sizes): dim1(85), dim2(85), dim3(85), dim4(85)
+    variables(dimensions): int32 [4mdim1[0m(dim1), int32 [4mdim2[0m(dim2), int32 [4mdim3[0m(dim3), int32 [4mdim4[0m(dim4), float64 [4mvar[0m()
+    groups: 
+
+s3://s3testqwer/s3testqwer1/test_S30.nca
+()
+()
+WARNING: Does not currently use buffer size or read pattern
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 153, in main
+    results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 90, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 22, in seq_read_1d
+    bytes_read = 8*var.shape[0]*var.shape[1]*var.shape[2]*var.shape[3]
+IndexError: tuple index out of range
+Sender: LSF System <lsfadmin@host184.jc.rl.ac.uk>
+Subject: Job 4655264: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 100000000> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 100000000> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 17:28:23 2017.
+Job was executed on host(s) <host184.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Mon Oct 30 17:28:24 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Oct 30 17:28:24 2017.
+Terminated at Mon Oct 30 17:29:05 2017.
+Results reported at Mon Oct 30 17:29:05 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c1S3_objvar.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_S3_objvar 100000000
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   14.32 sec.
+    Max Memory :                                 50.09 MB
+    Average Memory :                             50.09 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2944 MB
+    Max Processes :                              9
+    Max Threads :                                11
+    Run time :                                   41 sec.
+    Turnaround time :                            42 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 23725
+  daemon proc 23728 on host 192.168.110.184
+    rank 0:  proc 23753
+Host 0 -- ip 192.168.110.184 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'s3fileoverwrite': 1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/objvar.csv', 'stor': 's3', 'mpiio': 0L, 'objsize': '100000000', 'cleanup': 0L, 'filesize': 400000000L, 'fname': 'test_S3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 0 creating file s3://s3testqwer/s3testqwer1/test_S30.nc
+85
+<type 'netCDF4._netCDF4.Variable'>
+float64 var(dim1, dim2, dim3, dim4)
+unlimited dimensions: 
+current shape = (85, 85, 85, 85)
+filling on, default _FillValue of 9.96920996839e+36 used
+
+WARNING: Currently does not use buffer size in creation
+0.135039671259
+<class 'S3netCDF4._s3netCDF4.s3Dataset'>
+root group (NETCDF4 data model, file format HDF5):
+    Conventions: CFA-0.4
+    dimensions(sizes): dim1(85), dim2(85), dim3(85), dim4(85)
+    variables(dimensions): int32 [4mdim1[0m(dim1), int32 [4mdim2[0m(dim2), int32 [4mdim3[0m(dim3), int32 [4mdim4[0m(dim4), float64 [4mvar[0m()
+    groups: 
+
+s3://s3testqwer/s3testqwer1/test_S30.nca
+--
+()
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 153, in main
+    results = 'read,'+'objsize='+str(setup['stor'])+','+readfile(rank, fid+str(rank)+'.nca', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 90, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 20, in seq_read_1d
+    print data.shape
+NameError: global name 'data' is not defined

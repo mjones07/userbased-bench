@@ -1,0 +1,103 @@
+Sender: LSF System <lsfadmin@host063.jc.rl.ac.uk>
+Subject: Job 4427052: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4_hdf.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4_hdf.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Oct 27 12:22:51 2017.
+Job was executed on host(s) <4*host063.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct 27 12:22:52 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct 27 12:22:52 2017.
+Terminated at Fri Oct 27 13:17:05 2017.
+Results reported at Fri Oct 27 13:17:05 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn1c4_hdf.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   6289.54 sec.
+    Max Memory :                                 84.53 MB
+    Average Memory :                             79.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   3118 MB
+    Max Processes :                              11
+    Max Threads :                                13
+    Run time :                                   3253 sec.
+    Turnaround time :                            3254 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 8984
+  daemon proc 8987 on host 192.168.102.63
+    rank 0:  proc 8991
+    rank 1:  proc 8992
+    rank 2:  proc 8993
+    rank 3:  proc 8994
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.102.63 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'mpiio': 0L, 'stor': 'filesystem', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'test', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'mpiio': 0L, 'stor': 'filesystem', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'test', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'mpiio': 0L, 'stor': 'filesystem', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'test', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'mpiio': 0L, 'stor': 'filesystem', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'test', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+File exists, skipping creation.
+write,1,256000000000,1468.34856606,731.1,174.3455227
+write,2,256000000000,1483.32249498,732.96,172.585529427
+write,3,256000000000,1499.28249002,729.37,170.748341178
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.hdf5
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test1.hdf5
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test2.hdf5
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 168, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 141, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.hdf5', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_hdf.py", line 81, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_hdf.py", line 10, in seq_read_1d
+    f = h5py.File(fid,'r')
+  File "/usr/lib/python2.7/site-packages/h5py/_hl/files.py", line 269, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, swmr=swmr)
+  File "/usr/lib/python2.7/site-packages/h5py/_hl/files.py", line 99, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/home/builderdev/rpmbuild/BUILD/h5py-2.7.1/h5py/_objects.c:2678)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/home/builderdev/rpmbuild/BUILD/h5py-2.7.1/h5py/_objects.c:2636)
+  File "h5py/h5f.pyx", line 78, in h5py.h5f.open (/home/builderdev/rpmbuild/BUILD/h5py-2.7.1/h5py/h5f.c:1959)
+IOError: Unable to open file (unable to open file: name = '/group_workspaces/jasmin/hiresgw/vol1/mj07/test3.hdf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+/group_workspaces/jasmin/hiresgw/vol1/mj07/test0.hdf5
+read,1,256000000000,256000000000,1000000.0,256000.0,sequential,208.34,1627.43383598,157.302861929
+read,0,256000000000,256000000000,1000000.0,256000.0,sequential,206.75,1706.08431983,150.051200298
+read,2,256000000000,256000000000,1000000.0,256000.0,sequential,204.94,1750.68918395,146.228126813

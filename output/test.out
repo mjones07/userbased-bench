@@ -1,0 +1,559 @@
+Sender: LSF System <lsfadmin@host130.jc.rl.ac.uk>
+Subject: Job 5006431: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 13:23:15 2017.
+Job was executed on host(s) <host130.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 13:23:16 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 13:23:16 2017.
+Terminated at Thu Nov  2 13:23:20 2017.
+Results reported at Thu Nov  2 13:23:20 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/test.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   1.83 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   4 sec.
+    Turnaround time :                            5 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 1976
+  daemon proc 1979 on host 192.168.107.130
+    rank 0:  proc 1983
+Host 0 -- ip 192.168.107.130 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 3932160L}
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 213, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 182, in main
+    results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 108, in readfile_4d
+    assert (dim4*dim3)%(buffersize/8.) == 0, ValueError('Buffersize must be whole fraction of dimensions 3 and 4')
+AssertionError: Buffersize must be whole fraction of dimensions 3 and 4
+Sender: LSF System <lsfadmin@host287.jc.rl.ac.uk>
+Subject: Job 5002978: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 13:07:55 2017.
+Job was executed on host(s) <host287.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 13:07:56 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 13:07:56 2017.
+Terminated at Thu Nov  2 13:28:31 2017.
+Results reported at Thu Nov  2 13:28:31 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/test.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   323.93 sec.
+    Max Memory :                                 54.01 MB
+    Average Memory :                             52.36 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2488 MB
+    Max Processes :                              8
+    Max Threads :                                10
+    Run time :                                   1235 sec.
+    Turnaround time :                            1236 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 22628
+  daemon proc 22631 on host 192.168.120.187
+    rank 0:  proc 22635
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.120.187 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 'h', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxt_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 3932160L}
+Filling by iterating over dims 2,3 with 384*180 buffers of size 2x240x1024 elements, and a remainder of 0x240x1024 elements
+Bytes read = 259200
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 213, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 166, in main
+    results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 245, in readfile_4d
+    rate = bytes_read/wall_time
+NameError: global name 'bytes_read' is not defined
+Sender: LSF System <lsfadmin@host282.jc.rl.ac.uk>
+Subject: Job 5006821: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 13:25:18 2017.
+Job was executed on host(s) <host282.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 13:25:18 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 13:25:18 2017.
+Terminated at Thu Nov  2 13:29:52 2017.
+Results reported at Thu Nov  2 13:29:52 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/test.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf
+
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 143.
+
+Resource usage summary:
+
+    CPU time :                                   59.00 sec.
+    Max Memory :                                 52.15 MB
+    Average Memory :                             50.93 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   41994 MB
+    Max Processes :                              8
+    Max Threads :                                29
+    Run time :                                   274 sec.
+    Turnaround time :                            274 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 3222
+  daemon proc 3225 on host 192.168.120.182
+    rank 0:  proc 3229
+Host 0 -- ip 192.168.120.182 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 6291456L}
+Filling by iterating over dims 1,2 with 180*240 buffers of size 1x768x1024 elements, and a remainder of 0x768x1024 elements
+mpirun: propagating signal 18
+mpirun: propagating signal 2
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 213, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 182, in main
+    results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 141, in readfile_4d
+    data = var[i1,int(i2*buff_el):int((i2+1)*buff_el),:,:]
+  File "netCDF4/_netCDF4.pyx", line 3841, in netCDF4._netCDF4.Variable.__getitem__
+  File "netCDF4/_netCDF4.pyx", line 3956, in netCDF4._netCDF4.Variable._toma
+  File "/home/users/mjones07/virtenv/lib/python2.7/site-packages/numpy/core/_methods.py", line 37, in _any
+    def _any(a, axis=None, dtype=None, out=None, keepdims=False):
+KeyboardInterrupt
+mpirun: propagating signal 15
+Terminated
+Sender: LSF System <lsfadmin@host287.jc.rl.ac.uk>
+Subject: Job 5007954: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 13:30:02 2017.
+Job was executed on host(s) <host287.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 13:30:02 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 13:30:02 2017.
+Terminated at Thu Nov  2 13:45:48 2017.
+Results reported at Thu Nov  2 13:45:48 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/test.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   238.97 sec.
+    Max Memory :                                 61.63 MB
+    Average Memory :                             57.10 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   42004 MB
+    Max Processes :                              8
+    Max Threads :                                29
+    Run time :                                   946 sec.
+    Turnaround time :                            946 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 25123
+  daemon proc 25126 on host 192.168.120.187
+    rank 0:  proc 25130
+Host 0 -- ip 192.168.120.187 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 6291456L}
+Filling by iterating over dims 1,2 with 180*240 buffers of size 1x768x1024 elements, and a remainder of 0x768x1024 elements
+Bytes read = 259200
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 213, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 182, in main
+    results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 248, in readfile_4d
+    % (mpirank,var.shape[0]*8, dataread, num_elements*8, num_reads[0], cpu_time, wall_time, rate/1000**2)
+NameError: global name 'num_elements' is not defined
+Sender: LSF System <lsfadmin@host099.jc.rl.ac.uk>
+Subject: Job 5007925: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 13:29:52 2017.
+Job was executed on host(s) <host099.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 13:29:53 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 13:29:53 2017.
+Terminated at Thu Nov  2 13:48:26 2017.
+Results reported at Thu Nov  2 13:48:26 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/test.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   331.84 sec.
+    Max Memory :                                 57.33 MB
+    Average Memory :                             55.41 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   33678 MB
+    Max Processes :                              8
+    Max Threads :                                25
+    Run time :                                   1113 sec.
+    Turnaround time :                            1114 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 6884
+  daemon proc 6887 on host 192.168.106.99
+    rank 0:  proc 6891
+Host 0 -- ip 192.168.106.99 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 'h', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxt_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 3932160L}
+Filling by iterating over dims 2,3 with 384*180 buffers of size 2x240x1024 elements, and a remainder of 0x240x1024 elements
+Bytes read = 259200
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 213, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 166, in main
+    results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_nc.py", line 248, in readfile_4d
+    % (mpirank,var.shape[0]*8, dataread, num_elements*8, num_reads[0], cpu_time, wall_time, rate/1000**2)
+NameError: global name 'num_elements' is not defined
+Sender: LSF System <lsfadmin@host282.jc.rl.ac.uk>
+Subject: Job 5013184: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 13:51:59 2017.
+Job was executed on host(s) <host282.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 13:51:59 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 13:51:59 2017.
+Terminated at Thu Nov  2 14:04:52 2017.
+Results reported at Thu Nov  2 14:04:52 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/test.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpyhdf
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   236.90 sec.
+    Max Memory :                                 63.34 MB
+    Average Memory :                             59.56 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   42004 MB
+    Max Processes :                              8
+    Max Threads :                                29
+    Run time :                                   773 sec.
+    Turnaround time :                            773 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 5767
+  daemon proc 5770 on host 192.168.120.182
+    rank 0:  proc 5774
+Host 0 -- ip 192.168.120.182 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 6291456L}
+Filling by iterating over dims 1,2 with 180*240 buffers of size 1x768x1024 elements, and a remainder of 0x768x1024 elements
+Bytes read = 259200
+Sender: LSF System <lsfadmin@host266.jc.rl.ac.uk>
+Subject: Job 5013100: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 13:51:32 2017.
+Job was executed on host(s) <host266.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 13:51:33 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 13:51:33 2017.
+Terminated at Thu Nov  2 14:09:40 2017.
+Results reported at Thu Nov  2 14:09:40 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/test.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configpync
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   325.81 sec.
+    Max Memory :                                 58.17 MB
+    Average Memory :                             55.47 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   33678 MB
+    Max Processes :                              8
+    Max Threads :                                25
+    Run time :                                   1087 sec.
+    Turnaround time :                            1088 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 2907
+  daemon proc 2910 on host 192.168.114.166
+    rank 0:  proc 2914
+Host 0 -- ip 192.168.114.166 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 'h', 'filetype': 'nc', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxt_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 3932160L}
+Filling by iterating over dims 2,3 with 384*180 buffers of size 2x240x1024 elements, and a remainder of 0x240x1024 elements
+Bytes read = 259200
+Sender: LSF System <lsfadmin@host158.jc.rl.ac.uk>
+Subject: Job 5019331: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/submit_h5pyd /home/users/mjones07/userbased-bench/configpyhdf> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/test.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";###BSUB -x;###BSUB -m ivybridge128G;####BSUB -U iortest; mpirun.lotus /home/users/mjones07/userbased-bench/submit_h5pyd /home/users/mjones07/userbased-bench/configpyhdf> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Nov  2 14:19:20 2017.
+Job was executed on host(s) <host158.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Thu Nov  2 14:19:21 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Thu Nov  2 14:19:21 2017.
+Terminated at Thu Nov  2 14:34:47 2017.
+Results reported at Thu Nov  2 14:34:47 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/test.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+###BSUB -x
+###BSUB -m ivybridge128G
+####BSUB -U iortest
+
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_h5pyd /home/users/mjones07/userbased-bench/configpyhdf
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   250.59 sec.
+    Max Memory :                                 63.69 MB
+    Average Memory :                             58.03 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   33693 MB
+    Max Processes :                              9
+    Max Threads :                                26
+    Run time :                                   926 sec.
+    Turnaround time :                            927 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 9873
+  daemon proc 9876 on host 192.168.109.158
+    rank 0:  proc 9901
+Host 0 -- ip 192.168.109.158 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'dim': '4d', 'objsize': -1L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'hdf', 'randcount': 0L, 'results': '/home/users/mjones07/userbased-bench/4dresults', 'mpiio': 0L, 'stor': 'filesystem', 'var': 'u', 'test': 'r', 'cleanup': 0L, 'filesize': 256000000000L, 'fname': 'comp_test_uxy_c0.nc', 'floc': '/group_workspaces/jasmin/hiresgw/vol1/mj07/IO_testing_files/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 6291456L}
+Filling by iterating over dims 1,2 with 180*240 buffers of size 1x768x1024 elements, and a remainder of 0x768x1024 elements
+Bytes read = 259200

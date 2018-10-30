@@ -1,0 +1,83 @@
+Sender: LSF System <lsfadmin@host056.jc.rl.ac.uk>
+Subject: Job 1263964: <#!/bin/bash;#BSUB -q short-serial;#BSUB -oo /home/users/mjones07/userbased-bench/output/resultsn1c1S3_s.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configfiles/configpync_S3_s> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q short-serial;#BSUB -oo /home/users/mjones07/userbased-bench/output/resultsn1c1S3_s.out;#BSUB -W 24:00;#BSUB -n 1;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BUSB -m "host330 host342 host314 host302";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configfiles/configpync_S3_s> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Tue Jan 16 16:12:57 2018.
+Job was executed on host(s) <host056.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Tue Jan 16 16:13:04 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Tue Jan 16 16:13:04 2018.
+Terminated at Tue Jan 16 16:13:21 2018.
+Results reported at Tue Jan 16 16:13:21 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q short-serial
+#BSUB -oo /home/users/mjones07/userbased-bench/output/resultsn1c1S3_s.out
+#BSUB -W 24:00
+#BSUB -n 1
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BUSB -m "host330 host342 host314 host302"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configfiles/configpync_S3_s
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2.03 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   17 sec.
+    Turnaround time :                            24 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 31585
+  daemon proc 31588 on host 192.168.102.56
+    rank 0:  proc 31613
+Host 0 -- ip 192.168.102.56 -- ranks 0
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+{'filetype': 'nc', 'mpiio': 0L, 's3_access_key': 'mjones', 'rundir': '/home/users/mjones07/userbased-bench/', 'cleanup': 1L, 'filesize': 2147483648L, 'fname': 'testS3', 'readpattern': 's', 'forcewrite': 1L, 's3_endpoint': 'http://s3.jc.rl.ac.uk', 'objsize': -1L, 'chunking': 0L, 'stor': 's3', 'results': '/home/users/mjones07/userbased-bench/output/resultsS3test', 'var': 'var', 'test': 'rw', 's3fileoverwrite': 1L, 'dim': '4d', 'sharedfile': 0L, 'language': 'Python', 'randcount': 0L, 's3_secret_key': '?D!~u/1U_1YI', 'floc': 's3://s3/mjs3tests/', 'output': '/home/users/mjones07/userbased-bench/', 'buffersize': 16777216L}
+mpi rank 0 creating file s3://s3/mjs3tests/testS30.nc
+128
+128 128.0
+Filling by iterating over dim 1 with 128 buffers of size 1x128x128x128 elements, and a remainder of 0x128x128x128 elements
+[128, 128, 128, 128] 1
+0
+(1, 128, 128, 128)
+0 1
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 245, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 171, in main
+    size,buffersize = create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 84, in create_files
+    size,buffersize = netcdf_creation.create_netcdf_4d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1, stor=setup['stor'],objsize=int(setup['objsize']),chunking=setup['chunking'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 206, in create_netcdf_4d
+    var[int(i1*buff_el):int((i1+1)*buff_el),:,:,:] = data
+  File "S3netCDF4/_s3netCDF4.pyx", line 600, in S3netCDF4._s3netCDF4.s3Variable.__setitem__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:14160)
+  File "netCDF4/_netCDF4.pyx", line 4430, in netCDF4._netCDF4.Variable.__setitem__
+  File "netCDF4/_netCDF4.pyx", line 4657, in netCDF4._netCDF4.Variable._put
+IndexError: size of data array does not conform to slice

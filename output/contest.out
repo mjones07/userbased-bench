@@ -1,0 +1,77 @@
+Sender: LSF System <lsfadmin@host310.jc.rl.ac.uk>
+Subject: Job 8584528: <submit_contest> in cluster <lotus> Exited
+
+Job <submit_contest> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Nov 13 16:52:43 2017.
+Job was executed on host(s) <host310.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Mon Nov 13 16:52:47 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Nov 13 16:52:47 2017.
+Terminated at Mon Nov 13 16:52:47 2017.
+Results reported at Mon Nov 13 16:52:47 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+submit_contest
+------------------------------------------------------------
+
+Exited with exit code 127.
+
+Resource usage summary:
+
+    CPU time :                                   0.01 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   0 sec.
+    Turnaround time :                            4 sec.
+
+The output (if any) follows:
+
+/apps/lsf/conf/jobstarter.sh: line 8: exec: submit_contest: not found
+Sender: LSF System <lsfadmin@host325.jc.rl.ac.uk>
+Subject: Job 8584529: <./submit_contest> in cluster <lotus> Exited
+
+Job <./submit_contest> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Nov 13 16:53:14 2017.
+Job was executed on host(s) <host325.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Mon Nov 13 16:53:15 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Mon Nov 13 16:53:15 2017.
+Terminated at Mon Nov 13 16:53:28 2017.
+Results reported at Mon Nov 13 16:53:28 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./submit_contest
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   1.71 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   13 sec.
+    Turnaround time :                            14 sec.
+
+The output (if any) follows:
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/contest.py", line 10, in <module>
+    f = Dataset('s3://s3/mjtest/test0.nc')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1184)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3/mjtest/test0.nc not found.

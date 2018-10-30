@@ -1,0 +1,12 @@
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BSUB -m host314
+#BSUB -R "rusage[mem=44000]"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3

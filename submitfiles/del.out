@@ -1,0 +1,344 @@
+Sender: LSF System <lsfadmin@host079.jc.rl.ac.uk>
+Subject: Job 5315393: <#BSUB -o ./del.out; rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Done
+
+Job <#BSUB -o ./del.out; rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Feb  1 09:49:41 2018.
+Job was executed on host(s) <host079.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Thu Feb  1 09:49:41 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Thu Feb  1 09:49:41 2018.
+Terminated at Thu Feb  1 09:49:52 2018.
+Results reported at Thu Feb  1 09:49:52 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.88 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   11 sec.
+    Turnaround time :                            11 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <lsfadmin@host198.jc.rl.ac.uk>
+Subject: Job 5315438: <#BSUB -o ./del.out; rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Done
+
+Job <#BSUB -o ./del.out; rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Feb  1 10:25:46 2018.
+Job was executed on host(s) <host198.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Thu Feb  1 10:25:47 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Thu Feb  1 10:25:47 2018.
+Terminated at Thu Feb  1 10:25:57 2018.
+Results reported at Thu Feb  1 10:25:57 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.87 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   10 sec.
+    Turnaround time :                            11 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <lsfadmin@host309.jc.rl.ac.uk>
+Subject: Job 5499243: <#BSUB -o ./del.out; rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Exited
+
+Job <#BSUB -o ./del.out; rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Fri Feb  2 16:16:49 2018.
+Job was executed on host(s) <host309.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Fri Feb  2 16:55:56 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Fri Feb  2 16:55:56 2018.
+Terminated at Fri Feb  2 17:56:02 2018.
+Results reported at Fri Feb  2 17:56:02 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   67.00 sec.
+    Max Memory :                                 137.05 MB
+    Average Memory :                             137.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   459 MB
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   3606 sec.
+    Turnaround time :                            5953 sec.
+
+The output (if any) follows:
+
+User defined signal 2
+Sender: LSF System <lsfadmin@host311.jc.rl.ac.uk>
+Subject: Job 6503540: <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Done
+
+Job <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Feb  5 16:02:56 2018.
+Job was executed on host(s) <host311.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Mon Feb  5 17:08:04 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Mon Feb  5 17:08:04 2018.
+Terminated at Mon Feb  5 17:08:04 2018.
+Results reported at Mon Feb  5 17:08:04 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+#BSUB -W 20
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.01 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   0 sec.
+    Turnaround time :                            3908 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <lsfadmin@host177.jc.rl.ac.uk>
+Subject: Job 6503547: <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Done
+
+Job <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Feb  5 16:06:11 2018.
+Job was executed on host(s) <host177.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Mon Feb  5 17:42:15 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Mon Feb  5 17:42:15 2018.
+Terminated at Mon Feb  5 17:42:15 2018.
+Results reported at Mon Feb  5 17:42:15 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+#BSUB -W 20
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.01 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   0 sec.
+    Turnaround time :                            5764 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <lsfadmin@host026.jc.rl.ac.uk>
+Subject: Job 6503549: <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Done
+
+Job <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Feb  5 16:06:27 2018.
+Job was executed on host(s) <host026.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Mon Feb  5 18:10:33 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Mon Feb  5 18:10:33 2018.
+Terminated at Mon Feb  5 18:10:33 2018.
+Results reported at Mon Feb  5 18:10:33 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+#BSUB -W 20
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.02 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   0 sec.
+    Turnaround time :                            7446 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <lsfadmin@host333.jc.rl.ac.uk>
+Subject: Job 7123670: <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Done
+
+Job <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Thu Feb  8 15:53:43 2018.
+Job was executed on host(s) <host333.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Fri Feb  9 02:14:35 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Fri Feb  9 02:14:35 2018.
+Terminated at Fri Feb  9 02:14:39 2018.
+Results reported at Fri Feb  9 02:14:39 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+#BSUB -W 20
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.06 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   4 sec.
+    Turnaround time :                            37256 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <lsfadmin@host301.jc.rl.ac.uk>
+Subject: Job 8090437: <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Done
+
+Job <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Feb 19 13:23:20 2018.
+Job was executed on host(s) <host301.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Mon Feb 19 13:23:20 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Mon Feb 19 13:23:20 2018.
+Terminated at Mon Feb 19 13:23:21 2018.
+Results reported at Mon Feb 19 13:23:21 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+#BSUB -W 20
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.02 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            1 sec.
+
+The output (if any) follows:
+
+Sender: LSF System <lsfadmin@host319.jc.rl.ac.uk>
+Subject: Job 8206407: <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> in cluster <lotus> Done
+
+Job <#BSUB -o ./del.out;#BSUB -W 20;rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Wed Feb 21 14:56:40 2018.
+Job was executed on host(s) <host319.jc.rl.ac.uk>, in queue <short-serial>, as user <mjones07> in cluster <lotus> at Wed Feb 21 14:56:41 2018.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench/submitfiles> was used as the working directory.
+Started at Wed Feb 21 14:56:41 2018.
+Terminated at Wed Feb 21 14:56:41 2018.
+Results reported at Wed Feb 21 14:56:41 2018.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -o ./del.out
+#BSUB -W 20
+rm -rf /group_workspaces/jasmin/hiresgw/vol1/mj07/mjtest/testS30*
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.02 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   0 sec.
+    Turnaround time :                            1 sec.
+
+The output (if any) follows:
+

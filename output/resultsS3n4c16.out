@@ -1,0 +1,440 @@
+Sender: LSF System <lsfadmin@host330.jc.rl.ac.uk>
+Subject: Job 3828584: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c16.out;#BSUB -W 24:00;#BSUB -n 16;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m "host314 host302 host330 host342";#BSUB -R "rusage[mem=44000]";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c16.out;#BSUB -W 24:00;#BSUB -n 16;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m "host314 host302 host330 host342";#BSUB -R "rusage[mem=44000]";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Wed Oct 25 15:33:42 2017.
+Job was executed on host(s) <4*host330.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Fri Oct 27 22:50:03 2017.
+                            <4*host314.jc.rl.ac.uk>
+                            <4*host342.jc.rl.ac.uk>
+                            <4*host302.jc.rl.ac.uk>
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Fri Oct 27 22:50:03 2017.
+Terminated at Fri Oct 27 22:51:46 2017.
+Results reported at Fri Oct 27 22:51:46 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c16.out
+#BSUB -W 24:00
+#BSUB -n 16
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BSUB -m "host314 host302 host330 host342"
+#BSUB -R "rusage[mem=44000]"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   278.84 sec.
+    Max Memory :                                 64690.55 MB
+    Average Memory :                             25517.18 MB
+    Total Requested Memory :                     176000.00 MB
+    Delta Memory :                               111309.45 MB
+    Max Swap :                                   85241 MB
+    Max Processes :                              19
+    Max Threads :                                21
+    Run time :                                   103 sec.
+    Turnaround time :                            199084 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 72842
+  daemon proc 72845 on host 192.168.118.30
+    rank 0:  proc 72937
+    rank 1:  proc 72935
+    rank 2:  proc 72936
+    rank 3:  proc 72938
+  daemon proc 192734 on host 192.168.117.114
+    rank 4:  proc 192846
+    rank 5:  proc 192845
+    rank 6:  proc 192848
+    rank 7:  proc 192847
+  daemon proc 131625 on host 192.168.118.42
+    rank 8:  proc 131729
+    rank 9:  proc 131727
+    rank 10:  proc 131728
+    rank 11:  proc 131730
+  daemon proc 68607 on host 192.168.117.102
+    rank 12:  proc 68710
+    rank 13:  proc 68709
+    rank 14:  proc 68711
+    rank 15:  proc 68712
+Host 0 -- ip 192.168.118.30 -- ranks 0 - 3
+Host 1 -- ip 192.168.117.114 -- ranks 4 - 7
+Host 2 -- ip 192.168.118.42 -- ranks 8 - 11
+Host 3 -- ip 192.168.117.102 -- ranks 12 - 15
+
+ host | 0    1    2    3
+======|=====================
+    0 : SHM  TCP  TCP  TCP
+    1 : TCP  SHM  TCP  TCP
+    2 : TCP  TCP  SHM  TCP
+    3 : TCP  TCP  TCP  SHM
+
+ Prot -  All Intra-node communication is: SHM
+ Prot -  All Inter-node communication is: TCP
+
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+{'s3fileoverwrite': 0L, 'sharedfile': 0L, 'language': 'Python', 'readpattern': 's', 'filetype': 'nc', 'randcount': 0L, 'mpiio': 0L, 'stor': 's3', 'cleanup': 0L, 'filesize': 10000000000L, 'fname': 'testS3', 'floc': 's3://s3testqwer/s3testqwer1/', 'output': '/home/users/mjones07/userbased-bench/', 'rundir': '/home/users/mjones07/userbased-bench/', 'buffersize': 1000000L}
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+    results = seq_read_1d(mpirank, fid, num_elements)
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS36.nc not found.
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS38.nc not found.
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS311.nc not found.
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS35.nc not found.
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS39.nc not found.
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS37.nc not found.
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS313.nc not found.
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS315.nc not found.
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS310.nc not found.
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS314.nc not found.
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS312.nc not found.
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 173, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 136, in main
+    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['randcount'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 84, in readfile_1d
+    results = seq_read_1d(mpirank, fid, num_elements)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/readfile_s3.py", line 14, in seq_read_1d
+    f = Dataset(fid,'r')
+  File "S3netCDF4/_s3netCDF4.pyx", line 48, in S3netCDF4._s3netCDF4.s3Dataset.__init__ (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDF4.c:1198)
+  File "S3netCDF4/_s3netCDFIO.pyx", line 143, in S3netCDF4._s3netCDFIO.get_netCDF_file_details (/home/users/mjones07/.pyxbld/temp.linux-x86_64-2.7/pyrex/S3netCDF4/_s3netCDFIO.c:2748)
+S3netCDF4._s3Exceptions.s3IOException: Error: s3://s3testqwer/s3testqwer1/testS34.nc not found.
+read,0,10000000000,10000000000,1000000.0,10000.0,sequential,59.97,65.5760948658,152.494594569
+read,3,10000000000,10000000000,1000000.0,10000.0,sequential,48.58,76.5061230659,130.70849233
+read,1,10000000000,10000000000,1000000.0,10000.0,sequential,55.15,82.9458198547,120.560626413
+read,2,10000000000,10000000000,1000000.0,10000.0,sequential,58.01,88.4748909473,113.026417924
+Sender: LSF System <lsfadmin@host314.jc.rl.ac.uk>
+Subject: Job 4584290: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c16.out;#BSUB -W 24:00;#BSUB -n 16;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m "host314 host302 host330 host342";#BSUB -R "rusage[mem=44000]";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c16.out;#BSUB -W 24:00;#BSUB -n 16;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m "host314 host302 host330 host342";#BSUB -R "rusage[mem=44000]";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3> was submitted from host <jasmin-sci2-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Mon Oct 30 10:11:43 2017.
+Job was executed on host(s) <4*host314.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Tue Oct 31 06:57:54 2017.
+                            <4*host330.jc.rl.ac.uk>
+                            <4*host302.jc.rl.ac.uk>
+                            <4*host342.jc.rl.ac.uk>
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Tue Oct 31 06:57:54 2017.
+Terminated at Tue Oct 31 06:58:01 2017.
+Results reported at Tue Oct 31 06:58:01 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c16.out
+#BSUB -W 24:00
+#BSUB -n 16
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BSUB -m "host314 host302 host330 host342"
+#BSUB -R "rusage[mem=44000]"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   5.22 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     176000.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   7 sec.
+    Turnaround time :                            74778 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 193859
+  daemon proc 193862 on host 192.168.117.114
+    rank 0:  proc 193967
+    rank 1:  proc 193968
+    rank 2:  proc 193965
+    rank 3:  proc 193966
+  daemon proc 50783 on host 192.168.118.30
+    rank 4:  proc 50889
+    rank 5:  proc 50890
+    rank 6:  proc 50892
+    rank 7:  proc 50891
+  daemon proc 102305 on host 192.168.117.102
+    rank 8:  proc 102431
+    rank 9:  proc 102432
+    rank 10:  proc 102433
+    rank 11:  proc 102430
+  daemon proc 148744 on host 192.168.118.42
+    rank 12:  proc 148850
+    rank 13:  proc 148847
+    rank 14:  proc 148849
+    rank 15:  proc 148848
+Host 0 -- ip 192.168.117.114 -- ranks 0 - 3
+Host 1 -- ip 192.168.118.30 -- ranks 4 - 7
+Host 2 -- ip 192.168.117.102 -- ranks 8 - 11
+Host 3 -- ip 192.168.118.42 -- ranks 12 - 15
+
+ host | 0    1    2    3
+======|=====================
+    0 : SHM  TCP  TCP  TCP
+    1 : TCP  SHM  TCP  TCP
+    2 : TCP  TCP  SHM  TCP
+    3 : TCP  TCP  TCP  SHM
+
+ Prot -  All Intra-node communication is: SHM
+ Prot -  All Inter-node communication is: TCP
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+Traceback (most recent call last):
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    main()
+    os.system ('touch %s' % setup['results'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+KeyError: 'results'
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+    os.system ('touch %s' % setup['results'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    os.system ('touch %s' % setup['results'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+KeyError: 'results'
+    main()
+    os.system ('touch %s' % setup['results'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+KeyError: 'results'
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+KeyError: 'results'
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    os.system ('touch %s' % setup['results'])
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+KeyError: 'results'
+    main()
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+    os.system ('touch %s' % setup['results'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 190, in <module>
+KeyError: 'results'
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    main()
+    os.system ('touch %s' % setup['results'])
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 118, in main
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+    os.system ('touch %s' % setup['results'])
+    os.system ('touch %s' % setup['results'])
+KeyError: 'results'
+KeyError: 'results'
+KeyError: 'results'

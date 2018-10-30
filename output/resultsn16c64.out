@@ -1,0 +1,1394 @@
+Sender: LSF System <lsfadmin@host274.jc.rl.ac.uk>
+Subject: Job 2506823: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn16c64.out;#BSUB -W 24:00;#BSUB -n 64;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Exited
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn16c64.out;#BSUB -W 24:00;#BSUB -n 64;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Tue Oct 17 16:17:12 2017.
+Job was executed on host(s) <4*host274.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Tue Oct 17 19:38:41 2017.
+                            <4*host203.jc.rl.ac.uk>
+                            <4*host234.jc.rl.ac.uk>
+                            <4*host237.jc.rl.ac.uk>
+                            <4*host153.jc.rl.ac.uk>
+                            <4*host079.jc.rl.ac.uk>
+                            <4*host081.jc.rl.ac.uk>
+                            <4*host253.jc.rl.ac.uk>
+                            <4*host180.jc.rl.ac.uk>
+                            <4*host257.jc.rl.ac.uk>
+                            <4*host076.jc.rl.ac.uk>
+                            <4*host068.jc.rl.ac.uk>
+                            <4*host207.jc.rl.ac.uk>
+                            <4*host189.jc.rl.ac.uk>
+                            <4*host175.jc.rl.ac.uk>
+                            <4*host276.jc.rl.ac.uk>
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Tue Oct 17 19:38:41 2017.
+Terminated at Tue Oct 17 20:32:49 2017.
+Results reported at Tue Oct 17 20:32:49 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn16c64.out
+#BSUB -W 24:00
+#BSUB -n 64
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Exited with exit code 245.
+
+Resource usage summary:
+
+    CPU time :                                   1079.04 sec.
+    Max Memory :                                 100.93 MB
+    Average Memory :                             99.52 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   4938 MB
+    Max Processes :                              27
+    Max Threads :                                29
+    Run time :                                   3248 sec.
+    Turnaround time :                            15337 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 18505
+  daemon proc 18508 on host 192.168.113.174
+    rank 0:  proc 18559
+    rank 1:  proc 18560
+    rank 2:  proc 18561
+    rank 3:  proc 18562
+  daemon proc 29239 on host 192.168.113.203
+    rank 4:  proc 29282
+    rank 5:  proc 29283
+    rank 6:  proc 29284
+    rank 7:  proc 29285
+  daemon proc 26670 on host 192.168.115.234
+    rank 8:  proc 26713
+    rank 9:  proc 26714
+    rank 10:  proc 26715
+    rank 11:  proc 26716
+  daemon proc 18251 on host 192.168.115.237
+    rank 12:  proc 18293
+    rank 13:  proc 18294
+    rank 14:  proc 18295
+    rank 15:  proc 18296
+  daemon proc 3288 on host 192.168.109.153
+    rank 16:  proc 3334
+    rank 17:  proc 3335
+    rank 18:  proc 3336
+    rank 19:  proc 3337
+  daemon proc 22560 on host 192.168.103.79
+    rank 20:  proc 22602
+    rank 21:  proc 22603
+    rank 22:  proc 22604
+    rank 23:  proc 22605
+  daemon proc 13243 on host 192.168.103.81
+    rank 24:  proc 13288
+    rank 25:  proc 13289
+    rank 26:  proc 13290
+    rank 27:  proc 13291
+  daemon proc 21546 on host 192.168.114.253
+    rank 28:  proc 21592
+    rank 29:  proc 21593
+    rank 30:  proc 21594
+    rank 31:  proc 21595
+  daemon proc 17708 on host 192.168.110.180
+    rank 32:  proc 17752
+    rank 33:  proc 17753
+    rank 34:  proc 17754
+    rank 35:  proc 17755
+  daemon proc 21652 on host 192.168.114.157
+    rank 36:  proc 21695
+    rank 37:  proc 21696
+    rank 38:  proc 21697
+    rank 39:  proc 21698
+  daemon proc 21404 on host 192.168.103.76
+    rank 40:  proc 21446
+    rank 41:  proc 21447
+    rank 42:  proc 21448
+    rank 43:  proc 21449
+  daemon proc 8185 on host 192.168.102.68
+    rank 44:  proc 8227
+    rank 45:  proc 8228
+    rank 46:  proc 8229
+    rank 47:  proc 8230
+  daemon proc 17159 on host 192.168.113.207
+    rank 48:  proc 17207
+    rank 49:  proc 17208
+    rank 50:  proc 17209
+    rank 51:  proc 17210
+  daemon proc 16516 on host 192.168.110.189
+    rank 52:  proc 16558
+    rank 53:  proc 16559
+    rank 54:  proc 16560
+    rank 55:  proc 16561
+  daemon proc 13240 on host 192.168.110.175
+    rank 56:  proc 13282
+    rank 57:  proc 13283
+    rank 58:  proc 13284
+    rank 59:  proc 13285
+  daemon proc 10697 on host 192.168.113.176
+    rank 60:  proc 10737
+    rank 61:  proc 10738
+    rank 62:  proc 10739
+    rank 63:  proc 10740
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.113.174 -- ranks 0 - 3
+Host 1 -- ip 192.168.113.203 -- ranks 4 - 7
+Host 2 -- ip 192.168.115.234 -- ranks 8 - 11
+Host 3 -- ip 192.168.115.237 -- ranks 12 - 15
+Host 4 -- ip 192.168.109.153 -- ranks 16 - 19
+Host 5 -- ip 192.168.103.79 -- ranks 20 - 23
+Host 6 -- ip 192.168.103.81 -- ranks 24 - 27
+Host 7 -- ip 192.168.114.253 -- ranks 28 - 31
+Host 8 -- ip 192.168.110.180 -- ranks 32 - 35
+Host 9 -- ip 192.168.114.157 -- ranks 36 - 39
+Host 10 -- ip 192.168.103.76 -- ranks 40 - 43
+Host 11 -- ip 192.168.102.68 -- ranks 44 - 47
+Host 12 -- ip 192.168.113.207 -- ranks 48 - 51
+Host 13 -- ip 192.168.110.189 -- ranks 52 - 55
+Host 14 -- ip 192.168.110.175 -- ranks 56 - 59
+Host 15 -- ip 192.168.113.176 -- ranks 60 - 63
+
+userbased_nc_bench.py: Rank 0:47: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:46: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:44: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:45: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:7: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:4: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:5: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:6: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:24: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:26: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:27: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:25: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:49: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:51: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:50: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:48: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:43: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:40: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:42: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:41: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:18: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:16: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:17: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:19: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:21: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:22: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:23: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:20: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:31: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:30: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:28: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:29: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:13: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:15: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:12: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:14: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:10: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:8: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:11: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:9: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:39: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:36: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:38: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:37: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:35: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:33: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:32: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:34: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:56: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:58: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:57: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:59: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:53: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:55: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:54: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:52: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:63: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:62: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:61: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:60: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+ host | 0    1    2    3    4    5    6    7    8    9    10   11   12   13   14   15
+======|=================================================================================
+    0 : SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    1 : TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    2 : TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    3 : TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    4 : TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    5 : TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    6 : TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    7 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    8 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    9 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP
+   10 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP
+   11 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP
+   12 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP
+   13 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP
+   14 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP
+   15 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM
+
+ Prot -  All Intra-node communication is: SHM
+ Prot -  All Inter-node communication is: TCP
+
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    create_files(setup, mpisize, rank)
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+RuntimeError: NetCDF: HDF error
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    main()
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    create_files(setup, mpisize, rank)
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 26, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpisize-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Traceback (most recent call last):
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 88, in <module>
+    main()
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 64, in main
+    create_files(setup, mpisize, rank)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py", line 29, in create_files
+    netcdf_creation.create_netcdf_1d(setup['filesize'], setup['floc'], setup['fname'], setup['buffersize'], mpirank-1)
+  File "/home/users/mjones07/userbased-bench/userbased_nc_bench/netcdf_creation.py", line 52, in create_netcdf_1d
+    var[slice_ind0:slice_ind1] = np.random.random(bsize)
+  File "netCDF4/_netCDF4.pyx", line 4275, in netCDF4._netCDF4.Variable.__setitem__ (netCDF4/_netCDF4.c:46481)
+  File "netCDF4/_netCDF4.pyx", line 4528, in netCDF4._netCDF4.Variable._put (netCDF4/_netCDF4.c:48055)
+RuntimeError: NetCDF: HDF error
+Sender: LSF System <lsfadmin@host081.jc.rl.ac.uk>
+Subject: Job 2596843: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn16c64.out;#BSUB -W 24:00;#BSUB -n 64;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn16c64.out;#BSUB -W 24:00;#BSUB -n 64;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Wed Oct 18 10:54:10 2017.
+Job was executed on host(s) <4*host081.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Wed Oct 18 10:54:11 2017.
+                            <4*host239.jc.rl.ac.uk>
+                            <4*host099.jc.rl.ac.uk>
+                            <4*host138.jc.rl.ac.uk>
+                            <4*host186.jc.rl.ac.uk>
+                            <4*host083.jc.rl.ac.uk>
+                            <4*host061.jc.rl.ac.uk>
+                            <4*host134.jc.rl.ac.uk>
+                            <4*host256.jc.rl.ac.uk>
+                            <4*host198.jc.rl.ac.uk>
+                            <4*host173.jc.rl.ac.uk>
+                            <4*host247.jc.rl.ac.uk>
+                            <4*host158.jc.rl.ac.uk>
+                            <4*host176.jc.rl.ac.uk>
+                            <4*host150.jc.rl.ac.uk>
+                            <4*host093.jc.rl.ac.uk>
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Wed Oct 18 10:54:11 2017.
+Terminated at Wed Oct 18 14:56:09 2017.
+Results reported at Wed Oct 18 14:56:09 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn16c64.out
+#BSUB -W 24:00
+#BSUB -n 64
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   7217.10 sec.
+    Max Memory :                                 108.16 MB
+    Average Memory :                             97.87 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   5476 MB
+    Max Processes :                              31
+    Max Threads :                                33
+    Run time :                                   14517 sec.
+    Turnaround time :                            14519 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 6153
+  daemon proc 6156 on host 192.168.103.81
+    rank 0:  proc 6206
+    rank 1:  proc 6207
+    rank 2:  proc 6208
+    rank 3:  proc 6209
+  daemon proc 11227 on host 192.168.115.239
+    rank 4:  proc 11264
+    rank 5:  proc 11265
+    rank 6:  proc 11266
+    rank 7:  proc 11267
+  daemon proc 19905 on host 192.168.106.99
+    rank 8:  proc 19942
+    rank 9:  proc 19943
+    rank 10:  proc 19944
+    rank 11:  proc 19945
+  daemon proc 17015 on host 192.168.107.138
+    rank 12:  proc 17056
+    rank 13:  proc 17057
+    rank 14:  proc 17058
+    rank 15:  proc 17059
+  daemon proc 15978 on host 192.168.110.186
+    rank 16:  proc 16015
+    rank 17:  proc 16016
+    rank 18:  proc 16017
+    rank 19:  proc 16018
+  daemon proc 6214 on host 192.168.103.83
+    rank 20:  proc 6254
+    rank 21:  proc 6255
+    rank 22:  proc 6256
+    rank 23:  proc 6257
+  daemon proc 26998 on host 192.168.102.61
+    rank 24:  proc 27035
+    rank 25:  proc 27036
+    rank 26:  proc 27037
+    rank 27:  proc 27038
+  daemon proc 25858 on host 192.168.107.134
+    rank 28:  proc 25895
+    rank 29:  proc 25896
+    rank 30:  proc 25897
+    rank 31:  proc 25898
+  daemon proc 4998 on host 192.168.114.156
+    rank 32:  proc 5035
+    rank 33:  proc 5036
+    rank 34:  proc 5037
+    rank 35:  proc 5038
+  daemon proc 20538 on host 192.168.113.198
+    rank 36:  proc 20581
+    rank 37:  proc 20582
+    rank 38:  proc 20583
+    rank 39:  proc 20584
+  daemon proc 2087 on host 192.168.110.173
+    rank 40:  proc 2133
+    rank 41:  proc 2134
+    rank 42:  proc 2135
+    rank 43:  proc 2136
+  daemon proc 31196 on host 192.168.115.247
+    rank 44:  proc 31233
+    rank 45:  proc 31234
+    rank 46:  proc 31235
+    rank 47:  proc 31236
+  daemon proc 23081 on host 192.168.109.158
+    rank 48:  proc 23118
+    rank 49:  proc 23119
+    rank 50:  proc 23120
+    rank 51:  proc 23121
+  daemon proc 23226 on host 192.168.110.176
+    rank 52:  proc 23263
+    rank 53:  proc 23264
+    rank 54:  proc 23265
+    rank 55:  proc 23266
+  daemon proc 20968 on host 192.168.109.150
+    rank 56:  proc 21005
+    rank 57:  proc 21006
+    rank 58:  proc 21007
+    rank 59:  proc 21008
+  daemon proc 20495 on host 192.168.103.93
+    rank 60:  proc 20536
+    rank 61:  proc 20537
+    rank 62:  proc 20538
+    rank 63:  proc 20539
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.103.81 -- ranks 0 - 3
+Host 1 -- ip 192.168.115.239 -- ranks 4 - 7
+Host 2 -- ip 192.168.106.99 -- ranks 8 - 11
+Host 3 -- ip 192.168.107.138 -- ranks 12 - 15
+Host 4 -- ip 192.168.110.186 -- ranks 16 - 19
+Host 5 -- ip 192.168.103.83 -- ranks 20 - 23
+Host 6 -- ip 192.168.102.61 -- ranks 24 - 27
+Host 7 -- ip 192.168.107.134 -- ranks 28 - 31
+Host 8 -- ip 192.168.114.156 -- ranks 32 - 35
+Host 9 -- ip 192.168.113.198 -- ranks 36 - 39
+Host 10 -- ip 192.168.110.173 -- ranks 40 - 43
+Host 11 -- ip 192.168.115.247 -- ranks 44 - 47
+Host 12 -- ip 192.168.109.158 -- ranks 48 - 51
+Host 13 -- ip 192.168.110.176 -- ranks 52 - 55
+Host 14 -- ip 192.168.109.150 -- ranks 56 - 59
+Host 15 -- ip 192.168.103.93 -- ranks 60 - 63
+
+userbased_nc_bench.py: Rank 0:8: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:10: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:11: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:9: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:5: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:7: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:4: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:6: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:17: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:18: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:19: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:16: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:61: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:63: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:60: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:62: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:36: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:37: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:38: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:39: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:28: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:30: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:31: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:29: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:33: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:34: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:32: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:35: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:45: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:44: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:47: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:46: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:15: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:12: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:13: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:14: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:56: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:57: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:59: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:58: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:41: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:43: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:42: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:40: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:51: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:49: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:50: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:48: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:52: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:53: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:55: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:54: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:23: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:22: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:20: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:21: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:26: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:25: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:27: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:24: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+ host | 0    1    2    3    4    5    6    7    8    9    10   11   12   13   14   15
+======|=================================================================================
+    0 : SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    1 : TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    2 : TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    3 : TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    4 : TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    5 : TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    6 : TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    7 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    8 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    9 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP
+   10 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP
+   11 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP
+   12 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP
+   13 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP
+   14 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP
+   15 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM
+
+ Prot -  All Intra-node communication is: SHM
+ Prot -  All Inter-node communication is: TCP
+
+mpi rank 57 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test56.nc
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+mpi rank 31 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test30.nc
+mpi rank 39 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test38.nc
+mpi rank 41 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test40.nc
+mpi rank 22 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test21.nc
+mpi rank 54 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test53.nc
+mpi rank 53 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test52.nc
+mpi rank 52 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test51.nc
+mpi rank 55 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test54.nc
+mpi rank 17 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test16.nc
+mpi rank 60 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test59.nc
+mpi rank 56 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test55.nc
+mpi rank 51 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test50.nc
+mpi rank 13 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test12.nc
+mpi rank 18 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test17.nc
+mpi rank 33 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test32.nc
+mpi rank 11 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test10.nc
+mpi rank 24 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test23.nc
+mpi rank 19 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test18.nc
+mpi rank 8 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test7.nc
+mpi rank 61 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test60.nc
+mpi rank 12 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test11.nc
+mpi rank 43 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test42.nc
+mpi rank 28 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test27.nc
+mpi rank 23 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test22.nc
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 30 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test29.nc
+mpi rank 29 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test28.nc
+mpi rank 63 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test62.nc
+mpi rank 49 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test48.nc
+mpi rank 59 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test58.nc
+mpi rank 42 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test41.nc
+mpi rank 15 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test14.nc
+mpi rank 25 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test24.nc
+mpi rank 48 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test47.nc
+mpi rank 20 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test19.nc
+mpi rank 62 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test61.nc
+mpi rank 10 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test9.nc
+mpi rank 37 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test36.nc
+mpi rank 26 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test25.nc
+mpi rank 14 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test13.nc
+mpi rank 35 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test34.nc
+mpi rank 38 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test37.nc
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+mpi rank 34 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test33.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test63.nc
+mpi rank 9 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test8.nc
+mpi rank 16 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test15.nc
+mpi rank 21 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test20.nc
+mpi rank 27 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test26.nc
+mpi rank 36 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test35.nc
+mpi rank 40 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test39.nc
+mpi rank 32 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test31.nc
+mpi rank 50 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test49.nc
+mpi rank 58 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test57.nc
+mpi rank 45 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test44.nc
+mpi rank 5 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test4.nc
+mpi rank 4 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+mpi rank 47 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test46.nc
+mpi rank 7 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test6.nc
+mpi rank 44 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test43.nc
+mpi rank 6 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test5.nc
+mpi rank 46 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test45.nc
+read,39,256000000000,256000000000,1000000,256000,sequential,190.110000,3033.193744,84.399488
+read,8,256000000000,256000000000,1000000,256000,sequential,191.290000,3037.756586,84.272717
+read,10,256000000000,256000000000,1000000,256000,sequential,186.360000,3077.810305,83.176016
+read,50,256000000000,256000000000,1000000,256000,sequential,184.320000,3082.057423,83.061399
+read,34,256000000000,256000000000,1000000,256000,sequential,202.300000,3091.454233,82.808924
+read,0,256000000000,256000000000,1000000,256000,sequential,167.540000,3093.797701,82.746199
+read,60,256000000000,256000000000,1000000,256000,sequential,171.890000,3103.367265,82.491042
+read,27,256000000000,256000000000,1000000,256000,sequential,193.530000,3106.778990,82.400454
+read,37,256000000000,256000000000,1000000,256000,sequential,203.460000,3107.539827,82.380280
+read,9,256000000000,256000000000,1000000,256000,sequential,192.260000,3108.567428,82.353047
+read,11,256000000000,256000000000,1000000,256000,sequential,180.390000,3110.451067,82.303175
+read,24,256000000000,256000000000,1000000,256000,sequential,196.290000,3111.480123,82.275955
+read,62,256000000000,256000000000,1000000,256000,sequential,171.920000,3112.212608,82.256591
+read,51,256000000000,256000000000,1000000,256000,sequential,187.760000,3115.929228,82.158477
+read,33,256000000000,256000000000,1000000,256000,sequential,189.720000,3119.836372,82.055585
+read,16,256000000000,256000000000,1000000,256000,sequential,166.530000,3122.244866,81.992288
+read,38,256000000000,256000000000,1000000,256000,sequential,205.430000,3122.893718,81.975252
+read,47,256000000000,256000000000,1000000,256000,sequential,190.390000,3123.986501,81.946577
+read,35,256000000000,256000000000,1000000,256000,sequential,197.490000,3125.356321,81.910660
+read,1,256000000000,256000000000,1000000,256000,sequential,170.440000,3126.272609,81.886653
+read,36,256000000000,256000000000,1000000,256000,sequential,194.280000,3130.055594,81.787685
+read,21,256000000000,256000000000,1000000,256000,sequential,198.090000,3136.041535,81.631572
+read,5,256000000000,256000000000,1000000,256000,sequential,191.180000,3136.467120,81.620495
+read,32,256000000000,256000000000,1000000,256000,sequential,201.740000,3145.247388,81.392644
+read,49,256000000000,256000000000,1000000,256000,sequential,184.670000,3148.027414,81.320766
+read,45,256000000000,256000000000,1000000,256000,sequential,188.390000,3159.922417,81.014647
+read,2,256000000000,256000000000,1000000,256000,sequential,167.750000,3162.565559,80.946939
+read,25,256000000000,256000000000,1000000,256000,sequential,198.810000,3163.506888,80.922852
+read,54,256000000000,256000000000,1000000,256000,sequential,189.350000,3169.391328,80.772607
+read,3,256000000000,256000000000,1000000,256000,sequential,165.130000,3169.596591,80.767376
+read,30,256000000000,256000000000,1000000,256000,sequential,179.040000,3171.803713,80.711174
+read,63,256000000000,256000000000,1000000,256000,sequential,163.990000,3180.219134,80.497598
+read,23,256000000000,256000000000,1000000,256000,sequential,203.150000,3180.537221,80.489547
+read,46,256000000000,256000000000,1000000,256000,sequential,183.190000,3187.366200,80.317097
+read,26,256000000000,256000000000,1000000,256000,sequential,197.020000,3189.556459,80.261943
+read,22,256000000000,256000000000,1000000,256000,sequential,190.210000,3189.887733,80.253608
+read,40,256000000000,256000000000,1000000,256000,sequential,173.410000,3195.301503,80.117635
+read,48,256000000000,256000000000,1000000,256000,sequential,184.890000,3201.245516,79.968874
+read,19,256000000000,256000000000,1000000,256000,sequential,163.770000,3208.368543,79.791332
+read,59,256000000000,256000000000,1000000,256000,sequential,189.590000,3217.763126,79.558373
+read,12,256000000000,256000000000,1000000,256000,sequential,199.890000,3221.134494,79.475104
+read,20,256000000000,256000000000,1000000,256000,sequential,192.390000,3224.280997,79.397546
+read,53,256000000000,256000000000,1000000,256000,sequential,187.110000,3228.982494,79.281941
+read,44,256000000000,256000000000,1000000,256000,sequential,184.050000,3239.151933,79.033033
+read,43,256000000000,256000000000,1000000,256000,sequential,173.790000,3242.638055,78.948065
+read,14,256000000000,256000000000,1000000,256000,sequential,193.010000,3243.278947,78.932464
+read,18,256000000000,256000000000,1000000,256000,sequential,165.280000,3243.576125,78.925233
+read,56,256000000000,256000000000,1000000,256000,sequential,191.350000,3243.672515,78.922887
+read,7,256000000000,256000000000,1000000,256000,sequential,200.670000,3244.406717,78.905027
+read,17,256000000000,256000000000,1000000,256000,sequential,165.200000,3245.179964,78.886226
+read,31,256000000000,256000000000,1000000,256000,sequential,170.300000,3258.648475,78.560177
+read,58,256000000000,256000000000,1000000,256000,sequential,187.640000,3259.200511,78.546870
+read,55,256000000000,256000000000,1000000,256000,sequential,190.240000,3262.308590,78.472037
+read,61,256000000000,256000000000,1000000,256000,sequential,174.080000,3262.755153,78.461297
+read,15,256000000000,256000000000,1000000,256000,sequential,193.770000,3266.740898,78.365566
+read,28,256000000000,256000000000,1000000,256000,sequential,183.940000,3267.330458,78.351426
+read,52,256000000000,256000000000,1000000,256000,sequential,200.530000,3270.414641,78.277536
+read,29,256000000000,256000000000,1000000,256000,sequential,178.820000,3271.041558,78.262534
+read,57,256000000000,256000000000,1000000,256000,sequential,197.340000,3271.016769,78.263127
+read,4,256000000000,256000000000,1000000,256000,sequential,203.260000,3283.261312,77.971253
+read,42,256000000000,256000000000,1000000,256000,sequential,178.200000,3285.604263,77.915652
+read,41,256000000000,256000000000,1000000,256000,sequential,183.100000,3298.342089,77.614751
+read,13,256000000000,256000000000,1000000,256000,sequential,196.190000,3300.140467,77.572456
+read,6,256000000000,256000000000,1000000,256000,sequential,191.800000,3302.760509,77.510918

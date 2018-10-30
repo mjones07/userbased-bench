@@ -1,0 +1,82 @@
+Sender: LSF System <lsfadmin@host342.jc.rl.ac.uk>
+Subject: Job 3828581: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m "host314 host302 host330 host342";#BSUB -R "rusage[mem=44000]";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=1]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m "host314 host302 host330 host342";#BSUB -R "rusage[mem=44000]";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Wed Oct 25 15:33:22 2017.
+Job was executed on host(s) <1*host342.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Wed Oct 25 17:18:42 2017.
+                            <1*host330.jc.rl.ac.uk>
+                            <1*host314.jc.rl.ac.uk>
+                            <1*host302.jc.rl.ac.uk>
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Wed Oct 25 17:18:42 2017.
+Terminated at Wed Oct 25 17:19:44 2017.
+Results reported at Wed Oct 25 17:19:44 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n4c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=1]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BSUB -m "host314 host302 host330 host342"
+#BSUB -R "rusage[mem=44000]"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   51.07 sec.
+    Max Memory :                                 40.16 MB
+    Average Memory :                             40.16 MB
+    Total Requested Memory :                     176000.00 MB
+    Delta Memory :                               175959.84 MB
+    Max Swap :                                   3241 MB
+    Max Processes :                              13
+    Max Threads :                                15
+    Run time :                                   62 sec.
+    Turnaround time :                            6382 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 104158
+  daemon proc 104161 on host 192.168.118.42
+    rank 0:  proc 104234
+  daemon proc 96630 on host 192.168.118.30
+    rank 1:  proc 96675
+  daemon proc 11714 on host 192.168.117.114
+    rank 2:  proc 11763
+  daemon proc 28077 on host 192.168.117.102
+    rank 3:  proc 28122
+Host 0 -- ip 192.168.118.42 -- ranks 0
+Host 1 -- ip 192.168.118.30 -- ranks 1
+Host 2 -- ip 192.168.117.114 -- ranks 2
+Host 3 -- ip 192.168.117.102 -- ranks 3
+
+ host | 0    1    2    3
+======|=====================
+    0 : SHM  TCP  TCP  TCP
+    1 : TCP  SHM  TCP  TCP
+    2 : TCP  TCP  SHM  TCP
+    3 : TCP  TCP  TCP  SHM
+
+ Prot -  All Intra-node communication is: SHM
+ Prot -  All Inter-node communication is: TCP
+
+read,2,10000000000,10000000000,1000000.0,10000.0,sequential,18.7,27.6139099598,362.136329645
+read,3,10000000000,10000000000,1000000.0,10000.0,sequential,40.21,46.4033088684,215.501873549
+read,0,10000000000,10000000000,1000000.0,10000.0,sequential,40.82,46.4569480419,215.253055172
+read,1,10000000000,10000000000,1000000.0,10000.0,sequential,41.39,49.3786990643,202.51647349

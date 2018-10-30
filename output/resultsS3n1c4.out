@@ -1,0 +1,73 @@
+Sender: LSF System <lsfadmin@host314.jc.rl.ac.uk>
+Subject: Job 3828578: <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m host314;#BSUB -R "rusage[mem=44000]";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-single;#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n1c4.out;#BSUB -W 24:00;#BSUB -n 4;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3;#BSUB -m host314;#BSUB -R "rusage[mem=44000]";mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Wed Oct 25 15:33:01 2017.
+Job was executed on host(s) <4*host314.jc.rl.ac.uk>, in queue <par-single>, as user <mjones07> in cluster <lotus> at Wed Oct 25 15:33:01 2017.
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Wed Oct 25 15:33:01 2017.
+Terminated at Wed Oct 25 15:33:45 2017.
+Results reported at Wed Oct 25 15:33:45 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-single
+#BSUB -o /home/users/mjones07/userbased-bench/resultsS3n1c4.out
+#BSUB -W 24:00
+#BSUB -n 4
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+#BSUB -m host314
+#BSUB -R "rusage[mem=44000]"
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configpync_s3
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   115.20 sec.
+    Max Memory :                                 4350.59 MB
+    Average Memory :                             4350.59 MB
+    Total Requested Memory :                     44000.00 MB
+    Delta Memory :                               39649.41 MB
+    Max Swap :                                   7730 MB
+    Max Processes :                              15
+    Max Threads :                                17
+    Run time :                                   44 sec.
+    Turnaround time :                            44 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 192652
+  daemon proc 192655 on host 192.168.117.114
+    rank 0:  proc 192736
+    rank 1:  proc 192737
+    rank 2:  proc 192735
+    rank 3:  proc 192738
+submit_s3: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+submit_s3: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+submit_s3: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+submit_s3: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.117.114 -- ranks 0 - 3
+
+ host | 0
+======|======
+    0 : SHM
+
+ Prot -  All Intra-node communication is: SHM
+
+read,1,10000000000,10000000000,1000000.0,10000.0,sequential,25.7,37.7374069691,264.989060011
+read,0,10000000000,10000000000,1000000.0,10000.0,sequential,25.8,37.9089050293,263.790262269
+read,3,10000000000,10000000000,1000000.0,10000.0,sequential,25.1,40.9612119198,244.133401609
+read,2,10000000000,10000000000,1000000.0,10000.0,sequential,25.2,40.9765000343,244.042316733

@@ -1,0 +1,297 @@
+Sender: LSF System <lsfadmin@host276.jc.rl.ac.uk>
+Subject: Job 2506789: <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn12c48.out;#BSUB -W 24:00;#BSUB -n 48;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> in cluster <lotus> Done
+
+Job <#!/bin/bash;#BSUB -q par-multi;#BSUB -o /home/users/mjones07/userbased-bench/resultsn12c48.out;#BSUB -W 24:00;#BSUB -n 48;#BSUB -R "span[ptile=4]";####BSUB -x;####BSUB -m ivybridge128G;####BSUB -U iortestj3; mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc> was submitted from host <jasmin-sci1-panfs.ceda.ac.uk> by user <mjones07> in cluster <lotus> at Tue Oct 17 16:16:40 2017.
+Job was executed on host(s) <4*host276.jc.rl.ac.uk>, in queue <par-multi>, as user <mjones07> in cluster <lotus> at Tue Oct 17 16:16:41 2017.
+                            <4*host208.jc.rl.ac.uk>
+                            <4*host081.jc.rl.ac.uk>
+                            <4*host197.jc.rl.ac.uk>
+                            <4*host234.jc.rl.ac.uk>
+                            <4*host258.jc.rl.ac.uk>
+                            <4*host240.jc.rl.ac.uk>
+                            <4*host154.jc.rl.ac.uk>
+                            <4*host057.jc.rl.ac.uk>
+                            <4*host204.jc.rl.ac.uk>
+                            <4*host169.jc.rl.ac.uk>
+                            <4*host136.jc.rl.ac.uk>
+</home/users/mjones07> was used as the home directory.
+</home/users/mjones07/userbased-bench> was used as the working directory.
+Started at Tue Oct 17 16:16:41 2017.
+Terminated at Tue Oct 17 19:38:41 2017.
+Results reported at Tue Oct 17 19:38:41 2017.
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/resultsn12c48.out
+#BSUB -W 24:00
+#BSUB -n 48
+#BSUB -R "span[ptile=4]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/userbased_nc_bench/userbased_nc_bench.py /home/users/mjones07/userbased-bench/configcnc
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   8012.09 sec.
+    Max Memory :                                 108.04 MB
+    Average Memory :                             95.34 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   5229 MB
+    Max Processes :                              27
+    Max Threads :                                29
+    Run time :                                   12120 sec.
+    Turnaround time :                            12121 sec.
+
+The output (if any) follows:
+
+Parsing application description...
+Identifying hosts...
+Spawning processes...
+Process layout for world 0 is as follows:
+mpirun:  proc 4946
+  daemon proc 4949 on host 192.168.113.176
+    rank 0:  proc 4987
+    rank 1:  proc 4988
+    rank 2:  proc 4989
+    rank 3:  proc 4990
+  daemon proc 17379 on host 192.168.113.208
+    rank 4:  proc 17421
+    rank 5:  proc 17422
+    rank 6:  proc 17423
+    rank 7:  proc 17424
+  daemon proc 25072 on host 192.168.103.81
+    rank 8:  proc 25114
+    rank 9:  proc 25115
+    rank 10:  proc 25116
+    rank 11:  proc 25117
+  daemon proc 22143 on host 192.168.113.197
+    rank 12:  proc 22179
+    rank 13:  proc 22180
+    rank 14:  proc 22181
+    rank 15:  proc 22182
+  daemon proc 5389 on host 192.168.115.234
+    rank 16:  proc 5433
+    rank 17:  proc 5434
+    rank 18:  proc 5435
+    rank 19:  proc 5436
+  daemon proc 29199 on host 192.168.114.158
+    rank 20:  proc 29228
+    rank 21:  proc 29229
+    rank 22:  proc 29230
+    rank 23:  proc 29231
+  daemon proc 396 on host 192.168.115.240
+    rank 24:  proc 438
+    rank 25:  proc 439
+    rank 26:  proc 440
+    rank 27:  proc 441
+  daemon proc 25920 on host 192.168.109.154
+    rank 28:  proc 25948
+    rank 29:  proc 25949
+    rank 30:  proc 25950
+    rank 31:  proc 25951
+  daemon proc 18298 on host 192.168.102.57
+    rank 32:  proc 18340
+    rank 33:  proc 18341
+    rank 34:  proc 18342
+    rank 35:  proc 18343
+  daemon proc 18226 on host 192.168.113.204
+    rank 36:  proc 18255
+    rank 37:  proc 18256
+    rank 38:  proc 18257
+    rank 39:  proc 18258
+  daemon proc 1075 on host 192.168.109.169
+    rank 40:  proc 1106
+    rank 41:  proc 1107
+    rank 42:  proc 1108
+    rank 43:  proc 1109
+  daemon proc 4347 on host 192.168.107.136
+    rank 44:  proc 4391
+    rank 45:  proc 4392
+    rank 46:  proc 4393
+    rank 47:  proc 4394
+userbased_nc_bench.py: Rank 0:2: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:3: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:0: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:1: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+Host 0 -- ip 192.168.113.176 -- ranks 0 - 3
+Host 1 -- ip 192.168.113.208 -- ranks 4 - 7
+Host 2 -- ip 192.168.103.81 -- ranks 8 - 11
+Host 3 -- ip 192.168.113.197 -- ranks 12 - 15
+Host 4 -- ip 192.168.115.234 -- ranks 16 - 19
+Host 5 -- ip 192.168.114.158 -- ranks 20 - 23
+Host 6 -- ip 192.168.115.240 -- ranks 24 - 27
+Host 7 -- ip 192.168.109.154 -- ranks 28 - 31
+Host 8 -- ip 192.168.102.57 -- ranks 32 - 35
+Host 9 -- ip 192.168.113.204 -- ranks 36 - 39
+Host 10 -- ip 192.168.109.169 -- ranks 40 - 43
+Host 11 -- ip 192.168.107.136 -- ranks 44 - 47
+
+userbased_nc_bench.py: Rank 0:6: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:7: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:4: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:5: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:12: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:14: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:15: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:13: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:20: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:23: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:21: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:22: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:44: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:46: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:45: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:47: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:17: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:18: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:19: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:16: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:36: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:37: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:39: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:38: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:34: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:33: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:32: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:35: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:25: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:24: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:26: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:27: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:28: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:31: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:30: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:29: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:42: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:41: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:43: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:40: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:11: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:8: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:9: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+userbased_nc_bench.py: Rank 0:10: MPI_Init_thread: Unable to open /opt/platform_mpi/lib/linux_amd64/libcoll.so: undefined symbol: hpmp_comm_world - running with failsafe mpi collective algorithms.
+ host | 0    1    2    3    4    5    6    7    8    9    10   11
+======|=============================================================
+    0 : SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    1 : TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    2 : TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    3 : TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    4 : TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP  TCP
+    5 : TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP  TCP
+    6 : TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP  TCP
+    7 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP  TCP
+    8 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP  TCP
+    9 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP  TCP
+   10 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM  TCP
+   11 : TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  TCP  SHM
+
+ Prot -  All Intra-node communication is: SHM
+ Prot -  All Inter-node communication is: TCP
+
+mpi rank 1 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test0.nc
+mpi rank 43 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test42.nc
+mpi rank 40 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test39.nc
+mpi rank 41 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test40.nc
+mpi rank 42 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test41.nc
+mpi rank 0 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test47.nc
+mpi rank 9 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test8.nc
+mpi rank 46 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test45.nc
+mpi rank 44 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test43.nc
+mpi rank 8 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test7.nc
+mpi rank 15 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test14.nc
+mpi rank 11 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test10.nc
+mpi rank 23 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test22.nc
+mpi rank 3 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test2.nc
+mpi rank 22 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test21.nc
+mpi rank 20 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test19.nc
+mpi rank 31 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test30.nc
+mpi rank 38 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test37.nc
+mpi rank 30 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test29.nc
+mpi rank 13 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test12.nc
+mpi rank 14 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test13.nc
+mpi rank 5 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test4.nc
+mpi rank 21 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test20.nc
+mpi rank 2 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test1.nc
+mpi rank 6 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test5.nc
+mpi rank 33 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test32.nc
+mpi rank 28 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test27.nc
+mpi rank 34 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test33.nc
+mpi rank 10 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test9.nc
+mpi rank 29 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test28.nc
+mpi rank 39 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test38.nc
+mpi rank 47 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test46.nc
+mpi rank 4 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test3.nc
+mpi rank 12 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test11.nc
+mpi rank 7 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test6.nc
+mpi rank 36 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test35.nc
+mpi rank 37 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test36.nc
+mpi rank 35 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test34.nc
+mpi rank 32 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test31.nc
+mpi rank 26 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test25.nc
+mpi rank 27 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test26.nc
+mpi rank 17 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test16.nc
+mpi rank 24 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test23.nc
+mpi rank 45 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test44.nc
+mpi rank 16 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test15.nc
+mpi rank 19 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test18.nc
+mpi rank 25 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test24.nc
+mpi rank 18 creating file /group_workspaces/jasmin/hiresgw/vol1/mj07/test17.nc
+read,45,256000000000,256000000000,1000000,256000,sequential,165.520000,2416.121874,105.954920
+read,46,256000000000,256000000000,1000000,256000,sequential,167.920000,2464.441349,103.877497
+read,10,256000000000,256000000000,1000000,256000,sequential,168.360000,2465.173893,103.846630
+read,33,256000000000,256000000000,1000000,256000,sequential,160.610000,2464.777050,103.863349
+read,9,256000000000,256000000000,1000000,256000,sequential,168.610000,2472.749593,103.528477
+read,34,256000000000,256000000000,1000000,256000,sequential,165.850000,2477.023380,103.349852
+read,22,256000000000,256000000000,1000000,256000,sequential,157.620000,2483.494868,103.080543
+read,21,256000000000,256000000000,1000000,256000,sequential,162.930000,2485.004964,103.017903
+read,35,256000000000,256000000000,1000000,256000,sequential,159.650000,2499.548272,102.418506
+read,32,256000000000,256000000000,1000000,256000,sequential,162.900000,2512.119141,101.905995
+read,8,256000000000,256000000000,1000000,256000,sequential,170.700000,2522.970211,101.467706
+read,40,256000000000,256000000000,1000000,256000,sequential,162.880000,2542.872360,100.673555
+read,23,256000000000,256000000000,1000000,256000,sequential,155.900000,2546.160478,100.543545
+read,47,256000000000,256000000000,1000000,256000,sequential,164.610000,2562.677944,99.895502
+read,18,256000000000,256000000000,1000000,256000,sequential,169.610000,2573.477245,99.476302
+read,11,256000000000,256000000000,1000000,256000,sequential,166.540000,2578.074048,99.298932
+read,44,256000000000,256000000000,1000000,256000,sequential,169.710000,2580.665416,99.199221
+read,43,256000000000,256000000000,1000000,256000,sequential,160.960000,2590.245049,98.832348
+read,28,256000000000,256000000000,1000000,256000,sequential,168.460000,2594.884514,98.655643
+read,25,256000000000,256000000000,1000000,256000,sequential,185.600000,2609.062638,98.119530
+read,16,256000000000,256000000000,1000000,256000,sequential,170.740000,2612.807408,97.978902
+read,30,256000000000,256000000000,1000000,256000,sequential,163.560000,2620.177710,97.703297
+read,20,256000000000,256000000000,1000000,256000,sequential,165.910000,2621.478241,97.654825
+read,41,256000000000,256000000000,1000000,256000,sequential,164.090000,2653.898465,96.461867
+read,17,256000000000,256000000000,1000000,256000,sequential,169.870000,2662.075597,96.165564
+read,24,256000000000,256000000000,1000000,256000,sequential,186.090000,2676.228903,95.656989
+read,19,256000000000,256000000000,1000000,256000,sequential,169.770000,2677.833142,95.599683
+read,42,256000000000,256000000000,1000000,256000,sequential,160.990000,2706.897365,94.573220
+read,15,256000000000,256000000000,1000000,256000,sequential,165.090000,2707.753772,94.543308
+read,31,256000000000,256000000000,1000000,256000,sequential,161.880000,2718.283765,94.177070
+read,27,256000000000,256000000000,1000000,256000,sequential,182.790000,2722.502533,94.031134
+read,26,256000000000,256000000000,1000000,256000,sequential,185.090000,2736.266323,93.558144
+read,29,256000000000,256000000000,1000000,256000,sequential,164.190000,2737.428425,93.518427
+read,3,256000000000,256000000000,1000000,256000,sequential,175.430000,2741.669751,93.373755
+read,7,256000000000,256000000000,1000000,256000,sequential,188.600000,2742.132913,93.357984
+read,12,256000000000,256000000000,1000000,256000,sequential,164.150000,2743.939531,93.296517
+read,0,256000000000,256000000000,1000000,256000,sequential,180.610000,2752.473253,93.007262
+read,5,256000000000,256000000000,1000000,256000,sequential,182.710000,2780.357708,92.074484
+read,14,256000000000,256000000000,1000000,256000,sequential,167.850000,2783.466832,91.971637
+read,2,256000000000,256000000000,1000000,256000,sequential,177.940000,2800.196382,91.422159
+read,6,256000000000,256000000000,1000000,256000,sequential,187.200000,2809.473479,91.120276
+read,37,256000000000,256000000000,1000000,256000,sequential,176.710000,2820.525909,90.763215
+read,1,256000000000,256000000000,1000000,256000,sequential,179.480000,2830.569079,90.441177
+read,38,256000000000,256000000000,1000000,256000,sequential,179.430000,2861.505520,89.463395
+read,39,256000000000,256000000000,1000000,256000,sequential,175.160000,2864.627373,89.365899
+read,4,256000000000,256000000000,1000000,256000,sequential,186.760000,2867.451081,89.277896
+read,13,256000000000,256000000000,1000000,256000,sequential,166.570000,2873.137450,89.101202
+read,36,256000000000,256000000000,1000000,256000,sequential,184.090000,2887.584258,88.655422
