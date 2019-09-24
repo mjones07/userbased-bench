@@ -10,4 +10,4 @@
 ####BSUB -m ivybridge128G
 ####BSUB -U iortestj3
 
-mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configfiles/config_OpenDAP_100g_PFS
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configfiles/config_OpenDAP_100g_PFS $LSB_JOBID

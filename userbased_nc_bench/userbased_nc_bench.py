@@ -156,7 +156,6 @@ def main():
     #rank = 0
     #mpisize = 1
 
-
     setup_config_file = sys.argv[1]
     setup = get_setup(setup_config_file)
     os.system ('touch %s' % setup['results'])
@@ -191,24 +190,27 @@ def main():
         comm.barrier()
 
     if setup['stor'] == 'OPENDAP':
+        
+        job_id = sys.argv[2]
         assert setup['test'] == 'r', 'Only writes are used with OpenDAP tests'
         fids = glob('/group_workspaces/jasmin2/atsrrepro/mjones07/test*.nc')
-        shuffle(fids)
-        if rank<64:
-            fid = setup['floc']+fids[rank].split('/')[-1]
-        elif rank < 128:
-            fid = setup['floc']+fids[rank-64].split('/')[-1]
-        elif rank < 192:
-            fid = setup['floc']+fids[rank-128].split('/')[-1]
-        elif rank < 256:
-            fid = setup['floc']+fids[rank-192].split('/')[-1]
+        #shuffle(fids)
+        fid = setup['floc']+'test'+str(rank)+'.nc'
+        #if rank<64:
+        #    fid = setup['floc']+'test'+str(rank)+'.nc'#fids[rank].split('/')[-1]
+        #elif rank < 128:
+        #    fid = setup['floc']+#fids[rank-64].split('/')[-1]
+        #elif rank < 192:
+        #    fid = setup['floc']+#fids[rank-128].split('/')[-1]
+        #elif rank < 256:
+        #    fid = setup['floc']+#fids[rank-192].split('/')[-1]
         from readfile_nc import readfile_4d as readfile
-        results = 'read,' + 'objsize=' + str(setup['stor']) + ',' + readfile(rank,fid,setup['readpattern'], setup['buffersize'],setup['var'],0)
+        results = str(job_id)+',read,' + 'objsize=' + str(setup['stor']) + ',' + readfile(rank,fid,setup['readpattern'], setup['buffersize'],setup['var'],0)
 
     elif setup['stor'] == 'pydap':
         assert setup['test'] == 'r', 'Only writes are used with OpenDAP tests'
         fids = glob('/group_workspaces/jasmin2/atsrrepro/mjones07/test*.nc')
-        shuffle(fids)
+        #shuffle(fids)
         fid = setup['floc'] + fids[rank].split('/')[-1]
         from readfile_OD import readfile
         results = 'read,' + 'objsize=' + str(setup['stor']) + ',' + readfile(fid, setup['readpattern'],
@@ -225,7 +227,7 @@ def main():
         assert setup['test'] == 'r', 'Only writes are used with OpenDAP tests'
         fids = glob('/group_workspaces/jasmin2/atsrrepro/mjones07/opendap4gwsdata/*.nc')
         
-        shuffle(fids)
+        #shuffle(fids)
         fid = setup['floc']+fids[rank].split('/')[-1]
         print fid
         results = 'read,' + 'objsize=' + str(setup['stor']) + ',' + readfile(rank,fid,setup['readpattern'], 'all',setup['var'],0)
@@ -250,7 +252,20 @@ def main():
                 if fid[-1] == 'c':
                     results = 'read,'+readfile(rank, fid, setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
                 else:
-                    results = 'read,'+readfile(rank, fid+str(rank)+'.nc', setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
+                    # we can't have 256 test files so we need to wrap the test file numbers
+                    if rank < 64:
+                        fid_num = rank
+                    elif rank < 128:
+                        fid_num = rank - 64
+                    elif rank < 192:
+                        fid_num = rank - 128
+                    elif rank < 256:
+                        fid_num = rank - 192
+
+                    all_fids = glob('%s*.nc' % fid)
+                    
+
+                    results = 'read,'+readfile(rank, all_fids[fid_num], setup['readpattern'], setup['buffersize'], setup['var'], setup['randcount'])
             else:
                 raise ValueError('Only 1d and 4d reads supported')
 

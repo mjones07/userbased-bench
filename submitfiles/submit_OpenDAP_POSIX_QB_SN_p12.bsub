@@ -1,0 +1,11 @@
+#!/bin/bash
+#BSUB -q par-multi
+#BSUB -o /home/users/mjones07/userbased-bench/testing.out
+#BSUB -W 13:00
+#BSUB -n 12
+#BSUB -R "span[ptile=12]"
+####BSUB -x
+####BSUB -m ivybridge128G
+####BSUB -U iortestj3
+
+mpirun.lotus /home/users/mjones07/userbased-bench/submit_s3 /home/users/mjones07/userbased-bench/configfiles/config_OpenDAP_POSIX_QB_SN_p12 $LSB_JOBID
